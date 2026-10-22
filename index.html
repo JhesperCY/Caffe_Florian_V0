@@ -1,0 +1,559 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Caffe Florian</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lenis@1.3.26/dist/lenis.css"/>
+</head>
+
+<body>
+  <!-- top bar -->
+  <div class="bg-dark text-white py-1">
+    <div class="container d-flex justify-content-between">
+      <div>
+        <i class="fa-solid fa-phone"></i> +51 987 654 321
+        <i class="fa-solid fa-envelope ms-3"></i> contacto@caffeflorian.com
+      </div>
+      <div>
+        <a href="#" class="text-white me-2"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#" class="text-white me-2"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" class="text-white"><i class="fa-brands fa-tiktok"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <header class="sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img src="assets/img/logo.png" alt="logo" width="40" class="d-inline-block align-text-top" />
+          Caffe Florian</a>
+        <div class="d-flex align-items-center ms-auto order-lg-3">
+          <button class="btn btn-dark position-relative me-2" type="button" data-bs-toggle="offcanvas"
+            data-bs-target="#carritoOffcanvas" aria-label="Carrito">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span id="cartCount" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+              style="display: none;">0</span>
+          </button>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="hamburger" role="button" tabindex="0" aria-label="Menu">
+              <span class="hamburger-line top"></span>
+              <span class="hamburger-line mid"></span>
+              <span class="hamburger-line bottom"></span>
+            </span>
+          </button>
+        </div>
+        <div class="collapse navbar-collapse order-lg-2" id="navbarNav">
+          <ul class="navbar-nav ms-lg-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="assets/pages/catalogo.html#ofertas">Ofertas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="assets/pages/catalogo.html">Catalogo</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="assets/pages/proveedores.html">Proveedores</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="assets/pages/otras-tiendas.html">Otras Tiendas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="assets/pages/contacto.html">Contacto</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Utilidades
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item" href="#">Rastrear mi pedido</a></li>
+                <li><a class="dropdown-item" href="#">Preguntas frecuentes</a></li>
+                <li><a class="dropdown-item" href="#">Politica de devoluciones</a></li>
+                <li><a class="dropdown-item" href="assets/pages/nosotros.html">Sobre Nosotros</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <div id="carouselFlorian" class="carousel slide carousel-split" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselFlorian" data-bs-slide-to="0" class="active"></button>
+          <button type="button" data-bs-target="#carouselFlorian" data-bs-slide-to="1"></button>
+          <button type="button" data-bs-target="#carouselFlorian" data-bs-slide-to="2"></button>
+          <button type="button" data-bs-target="#carouselFlorian" data-bs-slide-to="3"></button>
+        </div>
+
+        <div class="carousel-inner">
+
+          <div class="carousel-item active">
+            <a href="assets/pages/catalogo.html?categoria=cafe-grano" class="carousel-link">
+              <div class="row g-0 h-100 position-relative">
+                <div class="col-md-6 carousel-img" style="background-image:url('assets/img/cafe-tueste-oscuro-1kg.jpg');"></div>
+                <div class="col-md-6 carousel-video-wrap">
+                  <video class="carousel-video" autoplay muted loop playsinline>
+                    <source src="assets/video/oferta.mp4" type="video/mp4">
+                  </video>
+                </div>
+                <div class="carousel-overlay-left"></div>
+                <div class="carousel-caption-custom">
+                  <span class="badge bg-cafe mb-2">Nuestro Origen</span>
+                  <h2>Cafe en Grano y Molido</h2>
+                  <p>Granos seleccionados de Colombia, listos para tu hogar.</p>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="carousel-item">
+            <a href="assets/pages/catalogo.html?categoria=maquinas" class="carousel-link">
+              <div class="row g-0 h-100 position-relative">
+                <div class="col-md-6 carousel-img" style="background-image:url('assets/img/moledor-manual.jpg');"></div>
+                <div class="col-md-6 carousel-video-wrap">
+                  <video class="carousel-video" autoplay muted loop playsinline>
+                    <source src="assets/video/maquinas.mp4" type="video/mp4">
+                  </video>
+                </div>
+                <div class="carousel-overlay-left"></div>
+                <div class="carousel-caption-custom">
+                  <span class="badge bg-cafe mb-2">Para tu Hogar</span>
+                  <h2>Maquinas y Accesorios</h2>
+                  <p>Cafeteras, moledores y todo lo necesario para preparar tu cafe.</p>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="carousel-item">
+            <a href="assets/pages/catalogo.html?categoria=kits-regalo" class="carousel-link">
+              <div class="row g-0 h-100 position-relative">
+                <div class="col-md-6 carousel-img" style="background-image:url('assets/img/caja-regalo-premium.svg');"></div>
+                <div class="col-md-6 carousel-video-wrap">
+                  <video class="carousel-video" autoplay muted loop playsinline>
+                    <source src="assets/video/kits.mp4" type="video/mp4">
+                  </video>
+                </div>
+                <div class="carousel-overlay-left"></div>
+                <div class="carousel-caption-custom">
+                  <span class="badge bg-cafe mb-2">El Regalo Ideal</span>
+                  <h2>Kits de Regalo</h2>
+                  <p>Combos listos para sorprender a quien mas quieres.</p>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="carousel-item">
+            <a href="assets/pages/catalogo.html?categoria=catering" class="carousel-link">
+              <div class="row g-0 h-100 position-relative">
+                <div class="col-md-6 carousel-img" style="background-image:url('assets/img/catering-corporativo.svg');"></div>
+                <div class="col-md-6 carousel-video-wrap">
+                  <video class="carousel-video" autoplay muted loop playsinline>
+                    <source src="assets/video/catering.mp4" type="video/mp4">
+                  </video>
+                </div>
+                <div class="carousel-overlay-left"></div>
+                <div class="carousel-caption-custom">
+                  <span class="badge bg-cafe mb-2">Para tu Evento</span>
+                  <h2>Catering Caffe Florian</h2>
+                  <p>Cafe y postres para recepciones, empresas y exposiciones.</p>
+                </div>
+              </div>
+            </a>
+          </div>
+
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselFlorian" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselFlorian" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+    </section>
+
+    <section>
+      <div class="container my-5">
+        <div class="row justify-content-center g-4 menu-categorias">
+
+          <div class="col-6 col-md-3 d-flex justify-content-center">
+            <a href="assets/pages/catalogo.html?categoria=cafe-grano" class="categoria-pill">
+              <span class="categoria-icono"><i class="fa-solid fa-mug-hot"></i></span>
+              <span class="categoria-texto">Cafe en Grano</span>
+            </a>
+          </div>
+
+          <div class="col-6 col-md-3 d-flex justify-content-center">
+            <a href="assets/pages/catalogo.html?categoria=maquinas" class="categoria-pill">
+              <span class="categoria-icono"><i class="fa-solid fa-gear"></i></span>
+              <span class="categoria-texto">Maquinas y Accesorios</span>
+            </a>
+          </div>
+
+          <div class="col-6 col-md-3 d-flex justify-content-center">
+            <a href="assets/pages/catalogo.html?categoria=souvenirs" class="categoria-pill">
+              <span class="categoria-icono"><i class="fa-solid fa-shirt"></i></span>
+              <span class="categoria-texto">Souvenirs</span>
+            </a>
+          </div>
+
+          <div class="col-6 col-md-3 d-flex justify-content-center">
+            <a href="assets/pages/catalogo.html?categoria=postres-mayor" class="categoria-pill">
+              <span class="categoria-icono"><i class="fa-solid fa-cookie"></i></span>
+              <span class="categoria-texto">Postres al por Mayor</span>
+            </a>
+          </div>
+
+          <div class="col-6 col-md-3 d-flex justify-content-center">
+            <a href="assets/pages/catalogo.html?categoria=kits-regalo" class="categoria-pill">
+              <span class="categoria-icono"><i class="fa-solid fa-gift"></i></span>
+              <span class="categoria-texto">Kits de Regalo</span>
+            </a>
+          </div>
+
+          <div class="col-6 col-md-3 d-flex justify-content-center">
+            <a href="assets/pages/catalogo.html?categoria=capsulas" class="categoria-pill">
+              <span class="categoria-icono"><i class="fa-solid fa-capsules"></i></span>
+              <span class="categoria-texto">Capsulas</span>
+            </a>
+          </div>
+
+          <div class="col-6 col-md-3 d-flex justify-content-center">
+            <a href="assets/pages/catalogo.html?categoria=suscripcion" class="categoria-pill">
+              <span class="categoria-icono"><i class="fa-solid fa-calendar-check"></i></span>
+              <span class="categoria-texto">Suscripcion Mensual</span>
+            </a>
+          </div>
+
+          <div class="col-6 col-md-3 d-flex justify-content-center">
+            <a href="assets/pages/catalogo.html?categoria=catering" class="categoria-pill">
+              <span class="categoria-icono"><i class="fa-solid fa-utensils"></i></span>
+              <span class="categoria-texto">Catering</span>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- origne -->
+    <section class="py-5">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <p class="text-uppercase text-cafe small mb-2">Nuestro Origen</p>
+            <h2>El Cafe que Elegimos para Ti</h2>
+            <p>Seleccionamos cuidadosamente granos 100% colombianos, cultivados en las montañas del Eje Cafetero, donde
+              el clima y la altitud crean condiciones ideales para un cafe de sabor excepcional.</p>
+            <p>Trabajamos directamente con pequeños productores que cosechan a mano cada grano, garantizando calidad
+              constante y comercio justo para las familias caficultoras.</p>
+            <a href="assets/pages/nosotros.html" class="btn btn-cafe">Conoce mas de nuestra historia</a>
+          </div>
+          <div class="col-md-6">
+            <div class="collage-cafe">
+              <img src="assets/img/origen-1.jpg" class="collage-img collage-img-1" alt="grano de cafe">
+              <img src="assets/img/origen-2.jpg" class="collage-img collage-img-2" alt="finca cafetera">
+              <img src="assets/img/origen-3.webp" class="collage-img collage-img-3" alt="tueste de cafe">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- datos -->
+     <section class="arch-section">
+      <div class="container pt-5 text-center">
+        <p class="text-uppercase text-cafe small mb-2">Favoritos de la casa</p>
+        <h2>Nuestros Productos Estrella</h2>
+      </div>
+
+      <div class="arch">
+        <div class="arch__left">
+
+          <div class="arch__info">
+            <div class="content">
+              <h3 class="header">Cafe Colombiano Supremo</h3>
+              <p class="desc">Grano del Eje Cafetero, tueste medio con notas a chocolate y frutos secos. Empaque eco-friendly con valvula de frescura, listo para tu hogar.</p>
+              <a class="link" href="assets/pages/catalogo.html?categoria=cafe-grano" style="background-color: #d1a054">
+                <i class="fa-solid fa-mug-hot"></i> <span>Ver cafe en grano</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="arch__info">
+            <div class="content">
+              <h3 class="header">Alfajores de Cafe</h3>
+              <p class="desc">Cajas de 12 unidades con manjar blanco artesanal y cobertura de cafe, hechas el mismo dia. Perfectas para la oficina o una reunion.</p>
+              <a class="link" href="assets/pages/catalogo.html?categoria=postres-mayor" style="background-color: #e8c9a0">
+                <i class="fa-solid fa-cookie"></i> <span>Ver postres al por mayor</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="arch__info">
+            <div class="content">
+              <h3 class="header">Cafetera Espresso</h3>
+              <p class="desc">15 bares de presion, acero inoxidable y vaporizador de leche incluido. Prepara un espresso de verdad sin salir de casa.</p>
+              <a class="link" href="assets/pages/catalogo.html?categoria=maquinas" style="background-color: #9fc5d6">
+                <i class="fa-solid fa-gear"></i> <span>Ver maquinas y accesorios</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="arch__info">
+            <div class="content">
+              <h3 class="header">Kit Degustacion</h3>
+              <p class="desc">Tres origenes en bolsas de 100g (Colombia, Peru y Brasil) con tarjetas de cata. El regalo ideal para quien ama el buen cafe.</p>
+              <a class="link" href="assets/pages/catalogo.html?categoria=kits-regalo" style="background-color: #f2b8a2">
+                <i class="fa-solid fa-gift"></i> <span>Ver kits de regalo</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="arch__right">
+          <div class="img-wrapper" data-index="4">
+            <img src="assets/img/cafe-colombiano-500g.jpg" alt="Bolsa de Cafe Colombiano Supremo" loading="lazy">
+          </div>
+          <div class="img-wrapper" data-index="3">
+            <img src="assets/img/caja-alfajores-12.jpg" alt="Caja de alfajores de cafe" loading="lazy">
+          </div>
+          <div class="img-wrapper" data-index="2">
+            <img src="assets/img/cafetera-espresso-manual.jpg" alt="Cafetera espresso manual" loading="lazy">
+          </div>
+          <div class="img-wrapper" data-index="1">
+            <img src="assets/img/kit-degustacion-3-origenes.jpg" alt="Kit de degustacion de tres origenes" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- testimonios -->
+    <section class="bg-cafe-oscuro text-white py-5">
+      <div class="container text-center">
+        <p class="text-uppercase text-warning small mb-2">Testimonios</p>
+        <h2 class="mb-5">Historias con Sabor</h2>
+
+        <div class="testimonios-stack mx-auto">
+          <div class="testimonio-stack-card">
+            <div class="text-warning mb-2"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+            <p>Descubri Caffe Florian hace un año y ya es parte de mi rutina de todas las mañanas, el espresso es como
+              ningun otro en la ciudad.</p>
+            <p class="fw-bold mb-0">Mart Kaur</p>
+            <small class="text-white-50">Diseñador grafico</small>
+          </div>
+          <div class="testimonio-stack-card">
+            <div class="text-warning mb-2"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+            <p>Vengo cada semana con mis amigos, el ambiente es acogedor y el tiramisu es de otro nivel. Ya es nuestro
+              lugar favorito.</p>
+            <p class="fw-bold mb-0">Sebastian Ponce</p>
+            <small class="text-white-50">Estudiante</small>
+          </div>
+          <div class="testimonio-stack-card">
+            <div class="text-warning mb-2"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                class="fa-solid fa-star-half-stroke"></i></div>
+            <p>No era fan del cafe frio hasta que probe el cold brew de aqui, ahora es lo primero que pido cada vez que
+              vengo.</p>
+            <p class="fw-bold mb-0">Lucia Fernandez</p>
+            <small class="text-white-50">Fotografa</small>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-dark text-light pt-4 pb-3">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mb-3">
+          <h5>Caffe Florian</h5>
+          <p>
+            El lugar perfecto para disfrutar de un buen cafe en compañia de
+            amigos y familia.
+          </p>
+        </div>
+        <div class="col-md-4 mb-3">
+          <h5>Horario</h5>
+          <p class="mb-1">Lunes a Viernes: 7:00am - 9:00pm</p>
+          <p>Sabado y Domingo: 8:00am - 10:00pm</p>
+        </div>
+        <div class="col-md-4 mb-3">
+          <h5>Contacto</h5>
+          <p class="mb-1">
+            <i class="fa-solid fa-location-dot"></i> Av. Los Cafetales 123,
+            Lima
+          </p>
+          <p class="mb-1">
+            <i class="fa-solid fa-phone"></i> +51 987 654 321
+          </p>
+          <p>
+            <i class="fa-solid fa-envelope"></i> contacto@caffeflorian.com
+          </p>
+        </div>
+      </div>
+      <hr class="border-light" />
+      <p class="text-center mb-0">
+        Caffe Florian 2026 - Todos los derechos reservados
+      </p>
+    </div>
+  </footer>
+
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="carritoOffcanvas" aria-labelledby="carritoOffcanvasLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="carritoOffcanvasLabel"><i class="fa-solid fa-cart-shopping me-2"></i>Carrito de
+        Compras</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <div id="carritoItems" class="mb-3">
+        <p class="text-center text-muted">El carrito esta vacio</p>
+      </div>
+      <div id="carritoTotal" class="d-none">
+        <hr />
+        <div class="d-flex justify-content-between mb-3">
+          <strong>Total:</strong>
+          <strong id="totalAmount">S/ 0.00</strong>
+        </div>
+        <button class="btn btn-agregar w-100" onclick="abrirResumenCompra()">
+          <i class="fa-solid fa-credit-card me-2"></i>Finalizar Compra
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="modalResumenCompra" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header bg-cafe-oscuro text-white">
+          <h5 class="modal-title">Resumen de Compra</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div id="resumenItems"></div>
+          <hr>
+          <div class="d-flex justify-content-between">
+            <strong>Total:</strong>
+            <strong id="resumenTotal">S/ 0.00</strong>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-cafe" onclick="irAConfirmacion()">Continuar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modalConfirmarCompra" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header bg-cafe-oscuro text-white">
+          <h5 class="modal-title">Finaliza tu Compra</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <h6>Forma de Entrega</h6>
+          <p class="border rounded p-2"><i class="fa-solid fa-location-dot me-2"></i>Av. Los Cafetales 123, Lima</p>
+
+          <h6 class="mt-3">Medios de Pago</h6>
+          <div id="medioPagoLista"></div>
+          <button type="button" class="btn btn-outline-dark btn-sm mt-2" onclick="abrirNuevaTarjeta()">
+            <i class="fa-solid fa-plus me-1"></i>Agregar nueva tarjeta
+          </button>
+
+          <h6 class="mt-3">Facturacion</h6>
+          <p class="text-muted small">Se emitira una boleta de venta electronica a nombre del cliente.</p>
+
+          <hr>
+          <div class="d-flex justify-content-between">
+            <strong>Total a pagar:</strong>
+            <strong id="confirmarTotal">S/ 0.00</strong>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-cafe" id="btnPagarFinalizar" onclick="confirmarPago()" disabled>Pagar y
+            Finalizar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modalNuevaTarjeta" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header bg-cafe-oscuro text-white">
+          <h5 class="modal-title">Agregar Nueva Tarjeta</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div class="mb-2">
+            <label class="form-label">Numero de tarjeta</label>
+            <input type="text" class="form-control" id="tarjetaNumero" maxlength="19" placeholder="0000 0000 0000 0000">
+          </div>
+          <div class="mb-2">
+            <label class="form-label">Nombre del titular</label>
+            <input type="text" class="form-control" id="tarjetaTitular" placeholder="Ej: Maria Lopez">
+          </div>
+          <div class="row">
+            <div class="col-6 mb-2">
+              <label class="form-label">Vencimiento</label>
+              <input type="text" class="form-control" id="tarjetaVencimiento" placeholder="MM/AA">
+            </div>
+            <div class="col-6 mb-2">
+              <label class="form-label">Codigo de seguridad</label>
+              <input type="text" class="form-control" id="tarjetaCvv" maxlength="3" placeholder="000">
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-cafe" onclick="guardarTarjeta()">Continuar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modalCompraExitosa" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content text-center">
+        <div class="modal-body py-5">
+          <i class="fa-solid fa-circle-check text-success fa-4x mb-3"></i>
+          <h4>Compra Realizada con Exito</h4>
+          <p class="text-muted">Gracias por tu compra en Caffe Florian</p>
+          <button type="button" class="btn btn-cafe" onclick="descargarComprobantePDF()">
+            <i class="fa-solid fa-file-pdf me-2"></i>Descargar Comprobante
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/library-carrusel.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/animejs@4/lib/anime.iife.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.3.26/dist/lenis.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="assets/JS/checkout.js"></script>
+  <script src="assets/js/library-catalogo.js"></script>
+  <script src="assets/js/library-menu.js"></script>
+  <script src="assets/js/library-nav_item.js"></script>
+  <script src="assets/js/library-lenis.js"></script>
+  <script src="assets/js/library-arch.js"></script>
+</body>
+</html>

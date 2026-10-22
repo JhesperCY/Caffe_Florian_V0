@@ -1,0 +1,2234 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catalogo - Caffe Florian</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+
+  <div class="bg-dark text-white py-1">
+    <div class="container d-flex justify-content-between">
+      <div>
+        <i class="fa-solid fa-phone"></i> +51 987 654 321
+        <i class="fa-solid fa-envelope ms-3"></i> contacto@caffeflorian.com
+      </div>
+      <div>
+        <a href="#" class="text-white me-2"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#" class="text-white me-2"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" class="text-white"><i class="fa-brands fa-tiktok"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="../../index.html">
+        <img src="../img/logo.png" alt="logo" width="40" class="d-inline-block align-text-top">
+        Caffe Florian</a>
+
+      <div class="d-flex align-items-center ms-auto order-lg-3">
+        <button class="btn btn-dark position-relative me-2" type="button" data-bs-toggle="offcanvas"
+          data-bs-target="#carritoOffcanvas" aria-label="Carrito">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span id="cartCount" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+            style="display:none;">0</span>
+        </button>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+
+      <div class="collapse navbar-collapse order-lg-2" id="navbarNav">
+        <ul class="navbar-nav ms-lg-auto">
+          <li class="nav-item"><a class="nav-link" href="../../index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="catalogo.html">Ofertas</a></li>
+          <li class="nav-item"><a class="nav-link active" href="catalogo.html">Catalogo</a></li>
+          <li class="nav-item"><a class="nav-link" href="proveedores.html">Proveedores</a></li>
+          <li class="nav-item"><a class="nav-link" href="otras-tiendas.html">Otras Tiendas</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Utilidades</a>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li><a class="dropdown-item" href="#">Rastrear mi pedido</a></li>
+              <li><a class="dropdown-item" href="#">Preguntas frecuentes</a></li>
+              <li><a class="dropdown-item" href="#">Politica de devoluciones</a></li>
+              <li><a class="dropdown-item" href="nosotros.html">Sobre Nosotros</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container mt-4 text-center">
+    <h2>Nuestro Catalogo</h2>
+    <p class="text-muted">Café, equipos y mucho más para los amantes del buen café</p>
+  </div>
+
+  <div class="container">
+    <div class="d-flex justify-content-center flex-wrap gap-2 mb-5" id="filtrosCatalogo">
+      <button class="btn btn-filtro active" data-filtro="todos" onclick="filtrarCatalogo('todos', this)">Todos</button>
+      <button class="btn btn-filtro" data-filtro="ofertas" onclick="filtrarCatalogo('ofertas', this)"><i
+          class="fa-solid fa-tags me-1"></i>Ofertas</button>
+      <button class="btn btn-filtro" data-filtro="cafe-grano" onclick="filtrarCatalogo('cafe-grano', this)">Cafe en
+        Grano y Molido</button>
+      <button class="btn btn-filtro" data-filtro="maquinas" onclick="filtrarCatalogo('maquinas', this)">Maquinas y
+        Accesorios</button>
+      <button class="btn btn-filtro" data-filtro="souvenirs"
+        onclick="filtrarCatalogo('souvenirs', this)">Souvenirs</button>
+      <button class="btn btn-filtro" data-filtro="postres-mayor"
+        onclick="filtrarCatalogo('postres-mayor', this)">Postres al por Mayor</button>
+      <button class="btn btn-filtro" data-filtro="kits-regalo" onclick="filtrarCatalogo('kits-regalo', this)">Kits de
+        Regalo</button>
+      <button class="btn btn-filtro" data-filtro="capsulas"
+        onclick="filtrarCatalogo('capsulas', this)">Capsulas</button>
+      <button class="btn btn-filtro" data-filtro="suscripcion"
+        onclick="filtrarCatalogo('suscripcion', this)">Suscripcion Mensual</button>
+      <button class="btn btn-filtro" data-filtro="catering"
+        onclick="filtrarCatalogo('catering', this)">Catering</button>
+    </div>
+  </div>
+
+  <div class="container mb-5">
+    <div class="row g-4" id="listaProductos">
+
+      <div class="col-md-4 col-lg-3" data-categoria="cafe-grano">
+        <div class="card h-100">
+          <img src="../img/cafe-colombiano-500g.jpg" class="card-img-top" alt="cafe colombiano">
+          <div class="card-body d-flex flex-column">
+            <h6 class="card-title">Cafe Colombiano Supremo 500g</h6>
+            <p class="card-text small">Molido, tueste medio, notas a chocolate y frutos secos.</p>
+            <p class="fw-bold mt-auto">S/ 45.00</p>
+            <div class="d-flex gap-2">
+              <button type="button" class="btn btn-outline-dark btn-sm" data-bs-toggle="modal"
+                data-bs-target="#modalCafeColombiano">Descripcion</button>
+              <button type="button" class="btn btn-agregar btn-sm"
+                onclick="agregarAlCarrito('Cafe Colombiano Supremo 500g', 45.00)"><i
+                  class="fa-solid fa-cart-plus"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade" id="modalCafeColombiano" tabindex="-1" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header bg-cafe-oscuro text-white">
+                <h5 class="modal-title"><i class="fa-solid fa-mug-hot me-2"></i>Cafe Colombiano Supremo 500g</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+              </div>
+              <div class="modal-body text-center">
+                <img src="../img/cafe-colombiano-500g.jpg" class="rounded mb-3"
+                  style="max-height:220px;width:100%;object-fit:cover;" alt="cafe colombiano">
+                <p class="text-muted mb-3">Grano seleccionado del Eje Cafetero colombiano, molido para metodos de
+                  filtrado. Conoce lo que hace especial a esta bolsa:</p>
+                <ul class="list-group list-group-flush mb-3">
+                  <li class="list-group-item d-flex align-items-center gap-2">
+                    <i class="fa-solid fa-mountain-sun" style="color:#4b2e2e;"></i>
+                    <div class="text-start">
+                      <strong>Origen</strong><br>
+                      <small class="text-muted">Cultivado en el Eje Cafetero colombiano, entre 1500 y 1800 metros de
+                        altitud.</small>
+                    </div>
+                  </li>
+                  <li class="list-group-item d-flex align-items-center gap-2">
+                    <i class="fa-solid fa-fire" style="color:#4b2e2e;"></i>
+                    <div class="text-start">
+                      <strong>Tueste</strong><br>
+                      <small class="text-muted">Tueste medio, resalta notas a chocolate y frutos secos, con acidez
+                        balanceada.</small>
+                    </div>
+                  </li>
+                  <li class="list-group-item d-flex align-items-center gap-2">
+                    <i class="fa-solid fa-leaf text-success"></i>
+                    <div class="text-start">
+                      <strong>Empaque Eco-friendly</strong><br>
+                      <small class="text-muted">Bolsa compostable con valvula de desgasificacion, mantiene el cafe
+                        fresco por mas tiempo.</small>
+                    </div>
+                  </li>
+                </ul>
+                <div class="alert alert-success py-2 mb-0">
+                  <i class="fa-solid fa-mug-saucer me-1"></i>
+                  <strong>Ideal para prepararlo en metodos de filtrado como V60 o Chemex.</strong>
+                </div>
+              </div>
+              <div class="modal-footer border-0 pt-0">
+                <div class="w-100 d-flex justify-content-between align-items-center mb-2">
+                  <span class="text-muted">Precio</span>
+                  <span class="h4 fw-bold" style="color:#4b2e2e;">S/ 45.00</span>
+                </div>
+                <div class="d-flex gap-2 w-100">
+                  <button type="button" class="btn btn-agregar flex-grow-1" data-bs-dismiss="modal"
+                    onclick="agregarAlCarrito('Cafe Colombiano Supremo 500g', 45.00)"><i
+                      class="fa-solid fa-cart-plus me-2"></i>Agregar al carrito</button>
+                  <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-lg-3" data-categoria="cafe-grano">
+        <div class="card h-100">
+          <img src="../img/cafe-tueste-oscuro-1kg.jpg" class="card-img-top" alt="cafe en grano">
+          <div class="card-body d-flex flex-column">
+            <h6 class="card-title">Cafe en Grano Tueste Oscuro 1kg</h6>
+            <p class="card-text small">Ideal para espresso, cuerpo intenso y final prolongado.</p>
+            <p class="fw-bold mt-auto">S/ 78.00</p>
+            <div class="d-flex gap-2">
+              <button type="button" class="btn btn-outline-dark btn-sm" data-bs-toggle="modal"
+                data-bs-target="#modalTuesteOscuro">Descripcion</button>
+              <button type="button" class="btn btn-agregar btn-sm"
+                onclick="agregarAlCarrito('Cafe en Grano Tueste Oscuro 1kg', 78.00)"><i
+                  class="fa-solid fa-cart-plus"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade" id="modalTuesteOscuro" tabindex="-1" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header bg-cafe-oscuro text-white">
+                <h5 class="modal-title"><i class="fa-solid fa-mug-hot me-2"></i>Cafe en Grano Tueste Oscuro 1kg</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+              </div>
+              <div class="modal-body text-center">
+                <img src="../img/cafe-tueste-oscuro-1kg.jpg" class="rounded mb-3"
+                  style="max-height:220px;width:100%;object-fit:cover;" alt="cafe en grano">
+                <p class="text-muted mb-3">Grano entero pensado para quienes preparan su propio espresso en casa. Conoce
+                  lo que hace especial a esta bolsa:</p>
+                <ul class="list-group list-group-flush mb-3">
+                  <li class="list-group-item d-flex align-items-center gap-2">
+                    <i class="fa-solid fa-mountain-sun" style="color:#4b2e2e;"></i>
+                    <div class="text-start">
+                      <strong>Origen</strong><br>
+                      <small class="text-muted">Mezcla de granos de Brasil y Peru, seleccionados por su cuerpo.</small>
+                    </div>
+                  </li>
+                  <li class="list-group-item d-flex align-items-center gap-2">
+                    <i class="fa-solid fa-fire" style="color:#4b2e2e;"></i>
+                    <div class="text-start">
+                      <strong>Tueste</strong><br>
+                      <small class="text-muted">Tueste oscuro, sabor intenso y amargor controlado, ideal para
+                        espresso.</small>
+                    </div>
+                  </li>
+                  <li class="list-group-item d-flex align-items-center gap-2">
+                    <i class="fa-solid fa-leaf text-success"></i>
+                    <div class="text-start">
+                      <strong>Empaque Eco-friendly</strong><br>
+                      <small class="text-muted">Bolsa con cierre hermetico reutilizable, formato familiar de
+                        1kg.</small>
+                    </div>
+                  </li>
+                </ul>
+                <div class="alert alert-success py-2 mb-0">
+                  <i class="fa-solid fa-mug-saucer me-1"></i>
+                  <strong>Perfecto para cafeteras de espresso y moledores domesticos.</strong>
+                </div>
+              </div>
+              <div class="modal-footer border-0 pt-0">
+                <div class="w-100 d-flex justify-content-between align-items-center mb-2">
+                  <span class="text-muted">Precio</span>
+                  <span class="h4 fw-bold" style="color:#4b2e2e;">S/ 78.00</span>
+                </div>
+                <div class="d-flex gap-2 w-100">
+                  <button type="button" class="btn btn-agregar flex-grow-1" data-bs-dismiss="modal"
+                    onclick="agregarAlCarrito('Cafe en Grano Tueste Oscuro 1kg', 78.00)"><i
+                      class="fa-solid fa-cart-plus me-2"></i>Agregar al carrito</button>
+                  <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-lg-3" data-categoria="cafe-grano">
+        <div class="card h-100">
+          <img src="../img/cafe-descafeinado-250g.jpg" class="card-img-top" alt="cafe descafeinado">
+          <div class="card-body d-flex flex-column">
+            <h6 class="card-title">Cafe Descafeinado Molido 250g</h6>
+            <p class="card-text small">Mismo sabor, sin cafeina. Ideal para las noches.</p>
+            <p class="fw-bold mt-auto">S/ 32.00</p>
+            <div class="d-flex gap-2">
+              <button type="button" class="btn btn-outline-dark btn-sm" data-bs-toggle="modal"
+                data-bs-target="#modalDescafeinado">Descripcion</button>
+              <button type="button" class="btn btn-agregar btn-sm"
+                onclick="agregarAlCarrito('Cafe Descafeinado Molido 250g', 32.00)"><i
+                  class="fa-solid fa-cart-plus"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade" id="modalDescafeinado" tabindex="-1" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header bg-cafe-oscuro text-white">
+                <h5 class="modal-title"><i class="fa-solid fa-mug-hot me-2"></i>Cafe Descafeinado Molido 250g</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+              </div>
+              <div class="modal-body text-center">
+                <img src="../img/cafe-descafeinado-250g.jpg" class="rounded mb-3"
+                  style="max-height:220px;width:100%;object-fit:cover;" alt="cafe descafeinado">
+                <p class="text-muted mb-3">Mismo sabor de siempre, para disfrutar a cualquier hora. Conoce lo que hace
+                  especial a esta bolsa:</p>
+                <ul class="list-group list-group-flush mb-3">
+                  <li class="list-group-item d-flex align-items-center gap-2">
+                    <i class="fa-solid fa-mountain-sun" style="color:#4b2e2e;"></i>
+                    <div class="text-start">
+                      <strong>Origen</strong><br>
+                      <small class="text-muted">Grano colombiano sometido a un proceso de descafeinado natural por
+                        agua.</small>
+                    </div>
+                  </li>
+                  <li class="list-group-item d-flex align-items-center gap-2">
+                    <i class="fa-solid fa-fire" style="color:#4b2e2e;"></i>
+                    <div class="text-start">
+                      <strong>Tueste</strong><br>
+                      <small class="text-muted">Tueste medio, conserva el sabor completo del cafe sin la
+                        cafeina.</small>
+                    </div>
+                  </li>
+                  <li class="list-group-item d-flex align-items-center gap-2">
+                    <i class="fa-solid fa-leaf text-success"></i>
+                    <div class="text-start">
+                      <strong>Empaque Eco-friendly</strong><br>
+                      <small class="text-muted">Bolsa compostable de 250g, ideal para consumo diario sin
+                        desperdicio.</small>
+                    </div>
+                  </li>
+                </ul>
+                <div class="alert alert-info py-2 mb-0">
+                  <i class="fa-solid fa-circle-info me-1"></i>
+                  <strong>Contiene menos del 0.1% de cafeina, apto para cualquier hora del dia.</strong>
+                </div>
+              </div>
+              <div class="modal-footer border-0 pt-0">
+                <div class="w-100 d-flex justify-content-between align-items-center mb-2">
+                  <span class="text-muted">Precio</span>
+                  <span class="h4 fw-bold" style="color:#4b2e2e;">S/ 32.00</span>
+                </div>
+                <div class="d-flex gap-2 w-100">
+                  <button type="button" class="btn btn-agregar flex-grow-1" data-bs-dismiss="modal"
+                    onclick="agregarAlCarrito('Cafe Descafeinado Molido 250g', 32.00)"><i
+                      class="fa-solid fa-cart-plus me-2"></i>Agregar al carrito</button>
+                  <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-lg-3" data-categoria="maquinas">
+        <div class="card h-100">
+          <img src="../img/cafetera-espresso-manual.jpg" class="card-img-top" alt="cafetera espresso">
+          <div class="card-body d-flex flex-column">
+            <h6 class="card-title">Cafetera Espresso Manual</h6>
+            <p class="card-text small">Para quienes quieren preparar espresso real en casa.</p>
+            <p class="fw-bold mt-auto">S/ 450.00</p>
+            <div class="d-flex gap-2">
+              <button type="button" class="btn btn-outline-dark btn-sm" data-bs-toggle="modal"
+                data-bs-target="#modalCafeteraEspresso">Descripcion</button>
+              <button type="button" class="btn btn-agregar btn-sm"
+                onclick="agregarAlCarrito('Cafetera Espresso Manual', 450.00)"><i
+                  class="fa-solid fa-cart-plus"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade" id="modalCafeteraEspresso" tabindex="-1" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header bg-cafe-oscuro text-white">
+                <h5 class="modal-title"><i class="fa-solid fa-mug-hot me-2"></i>Cafetera Espresso Manual</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+              </div>
+              <div class="modal-body text-center">
+                <img src="../img/cafetera-espresso-manual.jpg" class="rounded mb-3"
+                  style="max-height:220px;width:100%;object-fit:cover;" alt="cafetera espresso">
+                <p class="text-muted mb-3">Para quienes quieren preparar un espresso de verdad en casa, con control
+                  total del proceso.</p>
+                <ul class="list-group list-group-flush mb-3">
+                  <li class="list-group-item d-flex align-items-center gap-2">
+                    <i class="fa-solid fa-bolt" style="color:#4b2e2e;"></i>
+                    <div class="text-start">
+                      <strong>Potencia y Presion</strong><br>
+                      <small class="text-muted">15 bares de presion, motor de 1350W, calentamiento rapido.</small>
+                    </div>
+                  </li>
+                  <li class="list-group-item d-flex align-items-center gap-2">
+                    <i class="fa-solid fa-layer-group" style="color:#4b2e2e;"></i>
+                    <div class="text-start">
+                      <strong>Material</strong><br>
+                      <small class="text-muted">Acero inoxidable con base de aluminio fundido, resistente y
+                        duradero.</small>
+                    </div>
+                  </li>
+                  <li class="list-group-item d-flex align-items-center gap-2">
+                    <i class="fa-solid fa-box-open" style="color:#4b2e2e;"></i>
+                    <div class="text-start">
+                      <strong>Incluye</strong><br>
+                      <small class="text-muted">Portafiltro, vaporizador de leche y 2 tazas espresso de regalo.</small>
+                    </div>
+                  </li>
+                </ul>
+                <div class="alert alert-success py-2 mb-0">
+                  <i class="fa-solid fa-triangle-exclamation me-1"></i>
+                  <strong>Incluye garantia de 12 meses por defectos de fabricacion.</strong>
+                </div>
+              </div>
+              <div class="modal-footer border-0 pt-0">
+                <div class="w-100 d-flex justify-content-between align-items-center mb-2">
+                  <span class="text-muted">Precio</span>
+                  <span class="h4 fw-bold" style="color:#4b2e2e;">S/ 450.00</span>
+                </div>
+                <div class="d-flex gap-2 w-100">
+                  <button type="button" class="btn btn-agregar flex-grow-1" data-bs-dismiss="modal"
+                    onclick="agregarAlCarrito('Cafetera Espresso Manual', 450.00)"><i
+                      class="fa-solid fa-cart-plus me-2"></i>Agregar al carrito</button>
+                  <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-lg-3" data-categoria="maquinas">
+        <div class="card h-100">
+          <img src="../img/prensa-francesa.jpg" class="card-img-top" alt="prensa francesa">
+          <div class="card-body d-flex flex-column">
+            <h6 class="card-title">Prensa Francesa 600ml</h6>
+            <p class="card-text small">Metodo de filtrado clasico, resalta el cuerpo del cafe.</p>
+            <p class="fw-bold mt-auto">S/ 89.00</p>
+            <div class="d-flex gap-2">
+              <button type="button" class="btn btn-outline-dark btn-sm" data-bs-toggle="modal"
+                data-bs-target="#modalPrensaFrancesa">Descripcion</button>
+              <button type="button" class="btn btn-agregar btn-sm"
+                onclick="agregarAlCarrito('Prensa Francesa 600ml', 89.00)"><i
+                  class="fa-solid fa-cart-plus"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade" id="modalPrensaFrancesa" tabindex="-1" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header bg-cafe-oscuro text-white">
+                <h5 class="modal-title"><i class="fa-solid fa-mug-hot me-2"></i>Prensa Francesa 600ml</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+              </div>
+              <div class="modal-body text-center">
+                <img src="../img/prensa-francesa.jpg" class="rounded mb-3"
+                  style="max-height:220px;width:100%;object-fit:cover;" alt="prensa francesa">
+                <p class="text-muted mb-3">Metodo de filtrado clasico que resalta el cuerpo y los aceites naturales del
+                  cafe.</p>
+                <ul class="list-group list-group-flush mb-3">
+                  <li class="list-group-item d-flex align-items-center gap-2">
+                    <i class="fa-solid fa-ruler" style="color:#4b2e2e;"></i>
+                    <div class="text-start">
+                      <strong>Capacidad</strong><br>
+                      <small class="text-muted">600ml, rinde aproximadamente 4 tazas.</small>
+                    </div>
+                  </li>
+                  <li class="list-group-item d-flex align-items-center gap-2">
+                    <i class="fa-solid fa-layer-group" style="color:#4b2e2e;"></i>
+                    <div class="text-start">
+                      <strong>Material</strong><br>
+                      <small class="text-muted">Vidrio borosilicato resistente al calor con estructura de acero
+                        inoxidable.</small>
+                    </div>
+                  </li>
+                  <li class="list-group-item d-flex align-items-center gap-2">
+                    <i class="fa-solid fa-box-open" style="color:#4b2e2e;"></i>
+                    <div class="text-start">
+                      <strong>Incluye</strong><br>
+                      <small class="text-muted">Filtro de malla fina reemplazable y tapa con bisagra.</small>
+                    </div>
+                  </li>
+                </ul>
+                <div class="alert alert-success py-2 mb-0">
+                  <i class="fa-solid fa-mug-saucer me-1"></i>
+                  <strong>Ideal para granos de tueste medio a oscuro.</strong>
+                </div>
+              </div>
+              <div class="modal-footer border-0 pt-0">
+                <div class="w-100 d-flex justify-content-between align-items-center mb-2">
+                  <span class="text-muted">Precio</span>
+                  <span class="h4 fw-bold" style="color:#4b2e2e;">S/ 89.00</span>
+                </div>
+                <div class="d-flex gap-2 w-100">
+                  <button type="button" class="btn btn-agregar flex-grow-1" data-bs-dismiss="modal"
+                    onclick="agregarAlCarrito('Prensa Francesa 600ml', 89.00)"><i
+                      class="fa-solid fa-cart-plus me-2"></i>Agregar al carrito</button>
+                  <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-lg-3" data-categoria="maquinas">
+        <div class="card h-100">
+          <img src="../img/moledor-manual.jpg" class="card-img-top" alt="moledor manual">
+          <div class="card-body d-flex flex-column">
+            <h6 class="card-title">Moledor de Cafe Manual</h6>
+            <p class="card-text small">Muelas de ceramica, ajuste de molienda en 6 niveles.</p>
+            <p class="fw-bold mt-auto">S/ 65.00</p>
+            <div class="d-flex gap-2">
+              <button type="button" class="btn btn-outline-dark btn-sm" data-bs-toggle="modal"
+                data-bs-target="#modalMoledorManual">Descripcion</button>
+              <button type="button" class="btn btn-agregar btn-sm"
+                onclick="agregarAlCarrito('Moledor de Cafe Manual', 65.00)"><i
+                  class="fa-solid fa-cart-plus"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade" id="modalMoledorManual" tabindex="-1" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header bg-cafe-oscuro text-white">
+                <h5 class="modal-title"><i class="fa-solid fa-mug-hot me-2"></i>Moledor de Cafe Manual</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+              </div>
+              <div class="modal-body text-center">
+                <img src="../img/moledor-manual.jpg" class="rounded mb-3"
+                  style="max-height:220px;width:100%;object-fit:cover;" alt="moledor manual">
+                <p class="text-muted mb-3">Compacto y portatil, perfecto para moler tu cafe justo antes de prepararlo.
+                </p>
+                <ul class="list-group list-group-flush mb-3">
+                  <li class="list-group-item d-flex align-items-center gap-2">
+                    <i class="fa-solid fa-layer-group" style="color:#4b2e2e;"></i>
+                    <div class="text-start">
+                      <strong>Material</strong><br>
+                      <small class="text-muted">Muelas cronicas de ceramica, cuerpo de acero inoxidable.</small>
+                    </div>
+                  </li>
+                  <li class="list-group-item d-flex align-items-center gap-2">
+                    <i class="fa-solid fa-ruler" style="color:#4b2e2e;"></i>
+                    <div class="text-start">
+                      <strong>Capacidad</strong><br>
+                      <small class="text-muted">30 gramos de grano por carga, 6 niveles de ajuste de molienda.</small>
+                    </div>
+                  </li>
+                  <li class="list-group-item d-flex align-items-center gap-2">
+                    <i class="fa-solid fa-box-open" style="color:#4b2e2e;"></i>
+                    <div class="text-start">
+                      <strong>Incluye</strong><br>
+                      <small class="text-muted">Bolsa de transporte, ideal para llevar de viaje.</small>
+                    </div>
+                  </li>
+                </ul>
+                <div class="alert alert-success py-2 mb-0">
+                  <i class="fa-solid fa-mug-saucer me-1"></i>
+                  <strong>Compatible con cualquier metodo de preparacion, desde espresso hasta filtrado.</strong>
+                </div>
+              </div>
+              <div class="modal-footer border-0 pt-0">
+                <div class="w-100 d-flex justify-content-between align-items-center mb-2">
+                  <span class="text-muted">Precio</span>
+                  <span class="h4 fw-bold" style="color:#4b2e2e;">S/ 65.00</span>
+                </div>
+                <div class="d-flex gap-2 w-100">
+                  <button type="button" class="btn btn-agregar flex-grow-1" data-bs-dismiss="modal"
+                    onclick="agregarAlCarrito('Moledor de Cafe Manual', 65.00)"><i
+                      class="fa-solid fa-cart-plus me-2"></i>Agregar al carrito</button>
+                  <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-lg-3" data-categoria="souvenirs" data-oferta="si">
+        <div class="card h-100">
+          <span class="badge bg-danger position-absolute m-2">-20%</span>
+          <img src="../img/taza-edicion-venecia.svg" class="card-img-top" alt="taza caffe florian">
+          <div class="card-body d-flex flex-column">
+            <h6 class="card-title">Taza Caffe Florian Edicion Venecia</h6>
+            <p class="card-text small">Ceramica, 350ml, diseño inspirado en la cafeteria original.</p>
+            <p class="fw-bold mt-auto"><span class="text-decoration-line-through text-muted">S/ 35.00</span> S/ 28.00
+            </p>
+            <div class="d-flex gap-2">
+              <button type="button" class="btn btn-outline-dark btn-sm" data-bs-toggle="modal"
+                data-bs-target="#modalTazaVenecia">Descripcion</button>
+              <button type="button" class="btn btn-agregar btn-sm"
+                onclick="agregarAlCarrito('Taza Caffe Florian Edicion Venecia', 28.00)"><i
+                  class="fa-solid fa-cart-plus"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade" id="modalTazaVenecia" tabindex="-1" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header bg-danger text-white">
+                <h5 class="modal-title"><i class="fa-solid fa-mug-saucer me-2"></i>Taza Caffe Florian Edicion Venecia
+                </h5>
+                <span class="badge bg-light text-danger ms-2">-20%</span>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+              </div>
+              <div class="modal-body text-center">
+                <img src="../img/taza-edicion-venecia.svg" class="rounded mb-3"
+                  style="max-height:220px;width:100%;object-fit:cover;" alt="taza caffe florian">
+                <p class="text-muted mb-3">Pieza de coleccion inspirada en la historica cafeteria de Venecia que da
+                  nombre a nuestra marca.</p>
+                <ul class="list-group list-group-flush mb-3">
+                  <li class="list-group-item d-flex align-items-center gap-2">
+                    <i class="fa-solid fa-layer-group text-danger"></i>
+                    <div class="text-start">
+                      <strong>Material</strong><br>
+                      <small class="text-muted">Ceramica de alta resistencia, acabado brillante.</small>
+                    </div>
+                  </li>
+                  <li class="list-group-item d-flex align-items-center gap-2">
+                    <i class="fa-solid fa-ruler text-danger"></i>
+                    <div class="text-start">
+                      <strong>Capacidad</strong><br>
+                      <small class="text-muted">350ml, tamaño estandar para cafe con leche.</small>
+                    </div>
+                  </li>
+                  <li class="list-group-item d-flex align-items-center gap-2">
+                    <i class="fa-solid fa-hand-sparkles text-danger"></i>
+                    <div class="text-start">
+                      <strong>Cuidados</strong><br>
+                      <small class="text-muted">Apta para microondas y lavavajillas.</small>
+                    </div>
+                  </li>
+                </ul>
+                <div class="alert alert-danger py-2 mb-0">
+                  <i class="fa-solid fa-percent me-1"></i>
+                  <strong>¡20% de descuento por tiempo limitado!</strong>
+                </div>
+              </div>
+              <div class="modal-footer border-0 pt-0">
+                <div class="w-100 d-flex justify-content-between align-items-center mb-2">
+                  <span class="text-muted text-decoration-line-through">S/ 35.00</span>
+                  <span class="h4 fw-bold text-danger">S/ 28.00</span>
+                </div>
+                <div class="d-flex gap-2 w-100">
+                  <button type="button" class="btn btn-agregar flex-grow-1" data-bs-dismiss="modal"
+                    onclick="agregarAlCarrito('Taza Caffe Florian Edicion Venecia', 28.00)"><i
+                      class="fa-solid fa-cart-plus me-2"></i>Agregar al carrito</button>
+                  <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-lg-3" data-categoria="souvenirs">
+        <div class="card h-100">
+          <img src="../img/llavero-grano-cafe.jpg" class="card-img-top" alt="llavero">
+          <div class="card-body d-flex flex-column">
+            <h6 class="card-title">Llavero de Grano de Cafe</h6>
+            <p class="card-text small">Resina transparente con grano de cafe real en su interior.</p>
+            <p class="fw-bold mt-auto">S/ 15.00</p>
+            <div class="d-flex gap-2">
+              <button type="button" class="btn btn-outline-dark btn-sm" data-bs-toggle="modal"
+                data-bs-target="#modalLlavero">Descripcion</button>
+              <button type="button" class="btn btn-agregar btn-sm"
+                onclick="agregarAlCarrito('Llavero de Grano de Cafe', 15.00)"><i
+                  class="fa-solid fa-cart-plus"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade" id="modalLlavero" tabindex="-1" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header bg-cafe-oscuro text-white">
+                <h5 class="modal-title"><i class="fa-solid fa-mug-saucer me-2"></i>Llavero de Grano de Cafe</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+              </div>
+              <div class="modal-body text-center">
+                <img src="../img/llavero-grano-cafe.jpg" class="rounded mb-3"
+                  style="max-height:220px;width:100%;object-fit:cover;" alt="llavero">
+                <p class="text-muted mb-3">Pieza unica hecha a mano, un pequeño recuerdo de Caffe Florian para llevar a
+                  todos lados.</p>
+                <ul class="list-group list-group-flush mb-3">
+                  <li class="list-group-item d-flex align-items-center gap-2">
+                    <i class="fa-solid fa-layer-group" style="color:#4b2e2e;"></i>
+                    <div class="text-start">
+                      <strong>Material</strong><br>
+                      <small class="text-muted">Resina transparente con un grano de cafe real en su interior.</small>
+                    </div>
+                  </li>
+                  <li class="list-group-item d-flex align-items-center gap-2">
+                    <i class="fa-solid fa-ruler" style="color:#4b2e2e;"></i>
+                    <div class="text-start">
+                      <strong>Tamaño</strong><br>
+                      <small class="text-muted">Aproximadamente 4cm, incluye argolla metalica.</small>
+                    </div>
+                  </li>
+                  <li class="list-group-item d-flex align-items-center gap-2">
+                    <i class="fa-solid fa-hand-sparkles" style="color:#4b2e2e;"></i>
+                    <div class="text-start">
+                      <strong>Cuidados</strong><br>
+                      <small class="text-muted">Evitar exposicion prolongada al sol para que no se decolore.</small>
+                    </div>
+                  </li>
+                </ul>
+                <div class="alert alert-success py-2 mb-0">
+                  <i class="fa-solid fa-hands me-1"></i>
+                  <strong>Hecho a mano, cada pieza es ligeramente distinta.</strong>
+                </div>
+              </div>
+              <div class="modal-footer border-0 pt-0">
+                <div class="w-100 d-flex justify-content-between align-items-center mb-2">
+                  <span class="text-muted">Precio</span>
+                  <span class="h4 fw-bold" style="color:#4b2e2e;">S/ 15.00</span>
+                </div>
+                <div class="d-flex gap-2 w-100">
+                  <button type="button" class="btn btn-agregar flex-grow-1" data-bs-dismiss="modal"
+                    onclick="agregarAlCarrito('Llavero de Grano de Cafe', 15.00)"><i
+                      class="fa-solid fa-cart-plus me-2"></i>Agregar al carrito</button>
+                  <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-lg-3" data-categoria="souvenirs">
+        <div class="card h-100">
+          <img src="../img/polera-caffe-florian.svg" class="card-img-top" alt="polera">
+          <div class="card-body d-flex flex-column">
+            <h6 class="card-title">Polera Caffe Florian</h6>
+            <p class="card-text small">100% algodon, disponible en tallas S a XL.</p>
+            <p class="fw-bold mt-auto">S/ 55.00</p>
+            <div class="d-flex gap-2">
+              <button type="button" class="btn btn-outline-dark btn-sm" data-bs-toggle="modal"
+                data-bs-target="#modalPolera">Descripcion</button>
+              <button type="button" class="btn btn-agregar btn-sm"
+                onclick="agregarAlCarrito('Polera Caffe Florian', 55.00)"><i class="fa-solid fa-cart-plus"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade" id="modalPolera" tabindex="-1" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header bg-cafe-oscuro text-white">
+                <h5 class="modal-title"><i class="fa-solid fa-shirt me-2"></i>Polera Caffe Florian</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+              </div>
+              <div class="modal-body text-center">
+                <img src="../img/polera-caffe-florian.svg" class="rounded mb-3"
+                  style="max-height:220px;width:100%;object-fit:cover;" alt="polera">
+                <p class="text-muted mb-3">Lleva el espiritu de Caffe Florian a donde vayas con esta polera de corte
+                  clasico.</p>
+                <ul class="list-group list-group-flush mb-3">
+                  <li class="list-group-item d-flex align-items-center gap-2">
+                    <i class="fa-solid fa-layer-group" style="color:#4b2e2e;"></i>
+                    <div class="text-start">
+                      <strong>Material</strong><br>
+                      <small class="text-muted">100% algodon peinado, logo bordado en el pecho.</small>
+                    </div>
+                  </li>
+                  <li class="list-group-item d-flex align-items-center gap-2">
+                    <i class="fa-solid fa-ruler" style="color:#4b2e2e;"></i>
+                    <div class="text-start">
+                      <strong>Tallas</strong><br>
+                      <small class="text-muted">Disponible de S a XL, corte unisex.</small>
+                    </div>
+                  </li>
+                  <li class="list-group-item d-flex align-items-center gap-2">
+                    <i class="fa-solid fa-hand-sparkles" style="color:#4b2e2e;"></i>
+                    <div class="text-start">
+                      <strong>Cuidados</strong><br>
+                      <small class="text-muted">Lavar a maquina con agua fria, no usar secadora.</small>
+                    </div>
+                  </li>
+                </ul>
+                <div class="alert alert-success py-2 mb-0">
+                  <i class="fa-solid fa-tshirt me-1"></i>
+                  <strong>Indicar talla deseada al momento de finalizar la compra.</strong>
+                </div>
+              </div>
+              <div class="modal-footer border-0 pt-0">
+                <div class="w-100 d-flex justify-content-between align-items-center mb-2">
+                  <span class="text-muted">Precio</span>
+                  <span class="h4 fw-bold" style="color:#4b2e2e;">S/ 55.00</span>
+                </div>
+                <div class="d-flex gap-2 w-100">
+                  <button type="button" class="btn btn-agregar flex-grow-1" data-bs-dismiss="modal"
+                    onclick="agregarAlCarrito('Polera Caffe Florian', 55.00)"><i
+                      class="fa-solid fa-cart-plus me-2"></i>Agregar al carrito</button>
+                  <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-lg-3" data-categoria="postres-mayor">
+        <div class="card h-100">
+          <img src="../img/caja-alfajores-12.jpg" class="card-img-top" alt="alfajores">
+          <div class="card-body d-flex flex-column">
+            <h6 class="card-title">Caja de 12 Alfajores de Cafe</h6>
+            <p class="card-text small">Ideal para compartir en la oficina o reuniones.</p>
+            <p class="fw-bold mt-auto">S/ 60.00</p>
+            <div class="d-flex gap-2">
+              <button type="button" class="btn btn-outline-dark btn-sm" data-bs-toggle="modal"
+                data-bs-target="#modalAlfajores12">Descripcion</button>
+              <button type="button" class="btn btn-agregar btn-sm"
+                onclick="agregarAlCarrito('Caja de 12 Alfajores de Cafe', 60.00)"><i
+                  class="fa-solid fa-cart-plus"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade" id="modalAlfajores12" tabindex="-1" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header bg-cafe-oscuro text-white">
+                <h5 class="modal-title"><i class="fa-solid fa-cookie me-2"></i>Caja de 12 Alfajores de Cafe</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+              </div>
+              <div class="modal-body text-center">
+                <img src="../img/caja-alfajores-12.jpg" class="rounded mb-3"
+                  style="max-height:220px;width:100%;object-fit:cover;" alt="alfajores">
+                <p class="text-muted mb-3">Alfajores hechos el mismo dia, perfectos para compartir en la oficina o en
+                  reuniones.</p>
+                <ul class="list-group list-group-flush mb-3">
+                  <li class="list-group-item d-flex align-items-center gap-2">
+                    <i class="fa-solid fa-box" style="color:#4b2e2e;"></i>
+                    <div class="text-start">
+                      <strong>Presentacion</strong><br>
+                      <small class="text-muted">Caja de 12 unidades individuales envueltas.</small>
+                    </div>
+                  </li>
+                  <li class="list-group-item d-flex align-items-center gap-2">
+                    <i class="fa-solid fa-seedling" style="color:#4b2e2e;"></i>
+                    <div class="text-start">
+                      <strong>Ingredientes</strong><br>
+                      <small class="text-muted">Manjar blanco artesanal con cobertura de cafe.</small>
+                    </div>
+                  </li>
+                  <li class="list-group-item d-flex align-items-center gap-2">
+                    <i class="fa-solid fa-temperature-low" style="color:#4b2e2e;"></i>
+                    <div class="text-start">
+                      <strong>Conservacion</strong><br>
+                      <small class="text-muted">Consumir dentro de 5 dias, mantener en lugar fresco y seco.</small>
+                    </div>
+                  </li>
+                </ul>
+                <div class="alert alert-success py-2 mb-0">
+                  <i class="fa-solid fa-clock me-1"></i>
+                  <strong>Hecho el mismo dia de tu pedido para garantizar frescura.</strong>
+                </div>
+              </div>
+              <div class="modal-footer border-0 pt-0">
+                <div class="w-100 d-flex justify-content-between align-items-center mb-2">
+                  <span class="text-muted">Precio</span>
+                  <span class="h4 fw-bold" style="color:#4b2e2e;">S/ 60.00</span>
+                </div>
+                <div class="d-flex gap-2 w-100">
+                  <button type="button" class="btn btn-agregar flex-grow-1" data-bs-dismiss="modal"
+                    onclick="agregarAlCarrito('Caja de 12 Alfajores de Cafe', 60.00)"><i
+                      class="fa-solid fa-cart-plus me-2"></i>Agregar al carrito</button>
+                  <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-lg-3" data-categoria="postres-mayor" data-oferta="si">
+        <div class="card h-100">
+          <span class="badge bg-danger position-absolute m-2">-17%</span>
+          <img src="../img/docena-brownies.jpg" class="card-img-top" alt="brownies">
+          <div class="card-body d-flex flex-column">
+            <h6 class="card-title">Docena de Brownies</h6>
+            <p class="card-text small">Brownies de chocolate con nueces, para 12 personas.</p>
+            <p class="fw-bold mt-auto"><span class="text-decoration-line-through text-muted">S/ 72.00</span> S/ 60.00
+            </p>
+            <div class="d-flex gap-2">
+              <button type="button" class="btn btn-outline-dark btn-sm" data-bs-toggle="modal"
+                data-bs-target="#modalBrownies">Descripcion</button>
+              <button type="button" class="btn btn-agregar btn-sm"
+                onclick="agregarAlCarrito('Docena de Brownies', 60.00)"><i class="fa-solid fa-cart-plus"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade" id="modalBrownies" tabindex="-1" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header bg-danger text-white">
+                <h5 class="modal-title"><i class="fa-solid fa-cookie me-2"></i>Docena de Brownies</h5>
+                <span class="badge bg-light text-danger ms-2">-17%</span>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+              </div>
+              <div class="modal-body text-center">
+                <img src="../img/docena-brownies.jpg" class="rounded mb-3"
+                  style="max-height:220px;width:100%;object-fit:cover;" alt="brownies">
+                <p class="text-muted mb-3">12 unidades de brownie de chocolate, horneados artesanalmente.</p>
+                <ul class="list-group list-group-flush mb-3">
+                  <li class="list-group-item d-flex align-items-center gap-2">
+                    <i class="fa-solid fa-box text-danger"></i>
+                    <div class="text-start">
+                      <strong>Presentacion</strong><br>
+                      <small class="text-muted">12 unidades individuales, ideal para 12 personas.</small>
+                    </div>
+                  </li>
+                  <li class="list-group-item d-flex align-items-center gap-2">
+                    <i class="fa-solid fa-seedling text-danger"></i>
+                    <div class="text-start">
+                      <strong>Ingredientes</strong><br>
+                      <small class="text-muted">Chocolate semi-amargo y nueces.</small>
+                    </div>
+                  </li>
+                  <li class="list-group-item d-flex align-items-center gap-2">
+                    <i class="fa-solid fa-temperature-low text-danger"></i>
+                    <div class="text-start">
+                      <strong>Conservacion</strong><br>
+                      <small class="text-muted">Refrigerar si no se consume el mismo dia.</small>
+                    </div>
+                  </li>
+                </ul>
+                <div class="alert alert-danger py-2 mb-0">
+                  <i class="fa-solid fa-percent me-1"></i>
+                  <strong>¡17% de descuento esta semana!</strong>
+                </div>
+              </div>
+              <div class="modal-footer border-0 pt-0">
+                <div class="w-100 d-flex justify-content-between align-items-center mb-2">
+                  <span class="text-muted text-decoration-line-through">S/ 72.00</span>
+                  <span class="h4 fw-bold text-danger">S/ 60.00</span>
+                </div>
+                <div class="d-flex gap-2 w-100">
+                  <button type="button" class="btn btn-agregar flex-grow-1" data-bs-dismiss="modal"
+                    onclick="agregarAlCarrito('Docena de Brownies', 60.00)"><i
+                      class="fa-solid fa-cart-plus me-2"></i>Agregar al carrito</button>
+                  <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-lg-3" data-categoria="postres-mayor">
+        <div class="card h-100">
+          <img src="../img/caja-mini-cheesecakes-50.jpg" class="card-img-top" alt="mini cheesecakes">
+          <div class="card-body d-flex flex-column">
+            <h6 class="card-title">Caja de 50 Mini Cheesecakes</h6>
+            <p class="card-text small">Perfecto para eventos grandes y reuniones corporativas.</p>
+            <p class="fw-bold mt-auto">S/ 250.00</p>
+            <div class="d-flex gap-2">
+              <button type="button" class="btn btn-outline-dark btn-sm" data-bs-toggle="modal"
+                data-bs-target="#modalMiniCheesecakes">Descripcion</button>
+              <button type="button" class="btn btn-agregar btn-sm"
+                onclick="agregarAlCarrito('Caja de 50 Mini Cheesecakes', 250.00)"><i
+                  class="fa-solid fa-cart-plus"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade" id="modalMiniCheesecakes" tabindex="-1" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header bg-cafe-oscuro text-white">
+                <h5 class="modal-title"><i class="fa-solid fa-cake-candles me-2"></i>Caja de 50 Mini Cheesecakes</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+              </div>
+              <div class="modal-body text-center">
+                <img src="../img/caja-mini-cheesecakes-50.jpg" class="rounded mb-3"
+                  style="max-height:220px;width:100%;object-fit:cover;" alt="mini cheesecakes">
+                <p class="text-muted mb-3">Presentacion individual pensada para eventos grandes y reuniones
+                  corporativas.</p>
+                <ul class="list-group list-group-flush mb-3">
+                  <li class="list-group-item d-flex align-items-center gap-2">
+                    <i class="fa-solid fa-box" style="color:#4b2e2e;"></i>
+                    <div class="text-start">
+                      <strong>Presentacion</strong><br>
+                      <small class="text-muted">50 unidades individuales, ideal para eventos grandes.</small>
+                    </div>
+                  </li>
+                  <li class="list-group-item d-flex align-items-center gap-2">
+                    <i class="fa-solid fa-seedling" style="color:#4b2e2e;"></i>
+                    <div class="text-start">
+                      <strong>Ingredientes</strong><br>
+                      <small class="text-muted">Base de galleta y queso crema artesanal.</small>
+                    </div>
+                  </li>
+                  <li class="list-group-item d-flex align-items-center gap-2">
+                    <i class="fa-solid fa-temperature-low" style="color:#4b2e2e;"></i>
+                    <div class="text-start">
+                      <strong>Conservacion</strong><br>
+                      <small class="text-muted">Requiere refrigeracion, pedir con 48 horas de anticipacion.</small>
+                    </div>
+                  </li>
+                </ul>
+                <div class="alert alert-info py-2 mb-0">
+                  <i class="fa-solid fa-calendar-check me-1"></i>
+                  <strong>Recomendado pedir con anticipacion para eventos.</strong>
+                </div>
+              </div>
+              <div class="modal-footer border-0 pt-0">
+                <div class="w-100 d-flex justify-content-between align-items-center mb-2">
+                  <span class="text-muted">Precio</span>
+                  <span class="h4 fw-bold" style="color:#4b2e2e;">S/ 250.00</span>
+                </div>
+                <div class="d-flex gap-2 w-100">
+                  <button type="button" class="btn btn-agregar flex-grow-1" data-bs-dismiss="modal"
+                    onclick="agregarAlCarrito('Caja de 50 Mini Cheesecakes', 250.00)"><i
+                      class="fa-solid fa-cart-plus me-2"></i>Agregar al carrito</button>
+                  <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-lg-3" data-categoria="kits-regalo">
+        <div class="card h-100">
+          <img src="../img/kit-cafe-taza-chocolate.jpg" class="card-img-top" alt="kit regalo">
+          <div class="card-body d-flex flex-column">
+            <h6 class="card-title">Kit Cafe + Taza + Chocolate</h6>
+            <p class="card-text small">El regalo perfecto para cualquier ocasion.</p>
+            <p class="fw-bold mt-auto">S/ 85.00</p>
+            <div class="d-flex gap-2">
+              <button type="button" class="btn btn-outline-dark btn-sm" data-bs-toggle="modal"
+                data-bs-target="#modalKitBasico">Descripcion</button>
+              <button type="button" class="btn btn-agregar btn-sm"
+                onclick="agregarAlCarrito('Kit Cafe + Taza + Chocolate', 85.00)"><i
+                  class="fa-solid fa-cart-plus"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade" id="modalKitBasico" tabindex="-1" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header bg-cafe-oscuro text-white">
+                <h5 class="modal-title"><i class="fa-solid fa-gift me-2"></i>Kit Cafe + Taza + Chocolate</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+              </div>
+              <div class="modal-body text-center">
+                <img src="../img/kit-cafe-taza-chocolate.jpg" class="rounded mb-3"
+                  style="max-height:220px;width:100%;object-fit:cover;" alt="kit regalo">
+                <p class="text-muted mb-3">El regalo perfecto para cualquier ocasion, listo para entregar.</p>
+                <ul class="list-group list-group-flush mb-3">
+                  <li class="list-group-item d-flex align-items-center gap-2">
+                    <i class="fa-solid fa-gift" style="color:#4b2e2e;"></i>
+                    <div class="text-start">
+                      <strong>Contenido</strong><br>
+                      <small class="text-muted">Bolsa de cafe 250g, taza Caffe Florian y chocolate artesanal.</small>
+                    </div>
+                  </li>
+                  <li class="list-group-item d-flex align-items-center gap-2">
+                    <i class="fa-solid fa-box" style="color:#4b2e2e;"></i>
+                    <div class="text-start">
+                      <strong>Presentacion</strong><br>
+                      <small class="text-muted">Caja de regalo con cinta decorativa, lista para entregar.</small>
+                    </div>
+                  </li>
+                  <li class="list-group-item d-flex align-items-center gap-2">
+                    <i class="fa-solid fa-heart" style="color:#4b2e2e;"></i>
+                    <div class="text-start">
+                      <strong>Ideal para</strong><br>
+                      <small class="text-muted">Cumpleaños, dia del padre o la madre, agradecimientos.</small>
+                    </div>
+                  </li>
+                </ul>
+                <div class="alert alert-success py-2 mb-0">
+                  <i class="fa-solid fa-truck me-1"></i>
+                  <strong>Disponible para envio directo con tarjeta de dedicatoria.</strong>
+                </div>
+              </div>
+              <div class="modal-footer border-0 pt-0">
+                <div class="w-100 d-flex justify-content-between align-items-center mb-2">
+                  <span class="text-muted">Precio</span>
+                  <span class="h4 fw-bold" style="color:#4b2e2e;">S/ 85.00</span>
+                </div>
+                <div class="d-flex gap-2 w-100">
+                  <button type="button" class="btn btn-agregar flex-grow-1" data-bs-dismiss="modal"
+                    onclick="agregarAlCarrito('Kit Cafe + Taza + Chocolate', 85.00)"><i
+                      class="fa-solid fa-cart-plus me-2"></i>Agregar al carrito</button>
+                  <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-lg-3" data-categoria="kits-regalo">
+        <div class="card h-100">
+          <img src="../img/kit-degustacion-3-origenes.jpg" class="card-img-top" alt="kit degustacion">
+          <div class="card-body d-flex flex-column">
+            <h6 class="card-title">Kit Degustacion 3 Origenes</h6>
+            <p class="card-text small">Tres bolsas de 100g de cafes de distintas regiones.</p>
+            <p class="fw-bold mt-auto">S/ 120.00</p>
+            <div class="d-flex gap-2">
+              <button type="button" class="btn btn-outline-dark btn-sm" data-bs-toggle="modal"
+                data-bs-target="#modalKitDegustacion">Descripcion</button>
+              <button type="button" class="btn btn-agregar btn-sm"
+                onclick="agregarAlCarrito('Kit Degustacion 3 Origenes', 120.00)"><i
+                  class="fa-solid fa-cart-plus"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade" id="modalKitDegustacion" tabindex="-1" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header bg-cafe-oscuro text-white">
+                <h5 class="modal-title"><i class="fa-solid fa-gift me-2"></i>Kit Degustacion 3 Origenes</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+              </div>
+              <div class="modal-body text-center">
+                <img src="../img/kit-degustacion-3-origenes.jpg" class="rounded mb-3"
+                  style="max-height:220px;width:100%;object-fit:cover;" alt="kit degustacion">
+                <p class="text-muted mb-3">Compara perfiles de sabor de distintos origenes en un solo kit.</p>
+                <ul class="list-group list-group-flush mb-3">
+                  <li class="list-group-item d-flex align-items-center gap-2">
+                    <i class="fa-solid fa-gift" style="color:#4b2e2e;"></i>
+                    <div class="text-start">
+                      <strong>Contenido</strong><br>
+                      <small class="text-muted">3 bolsas de 100g: Colombia, Peru y Brasil.</small>
+                    </div>
+                  </li>
+                  <li class="list-group-item d-flex align-items-center gap-2">
+                    <i class="fa-solid fa-box" style="color:#4b2e2e;"></i>
+                    <div class="text-start">
+                      <strong>Presentacion</strong><br>
+                      <small class="text-muted">Caja con tarjetas descriptivas de cada origen.</small>
+                    </div>
+                  </li>
+                  <li class="list-group-item d-flex align-items-center gap-2">
+                    <i class="fa-solid fa-heart" style="color:#4b2e2e;"></i>
+                    <div class="text-start">
+                      <strong>Ideal para</strong><br>
+                      <small class="text-muted">Amantes del cafe que quieren comparar sabores.</small>
+                    </div>
+                  </li>
+                </ul>
+                <div class="alert alert-success py-2 mb-0">
+                  <i class="fa-solid fa-earth-americas me-1"></i>
+                  <strong>Un recorrido por 3 regiones cafeteras distintas.</strong>
+                </div>
+              </div>
+              <div class="modal-footer border-0 pt-0">
+                <div class="w-100 d-flex justify-content-between align-items-center mb-2">
+                  <span class="text-muted">Precio</span>
+                  <span class="h4 fw-bold" style="color:#4b2e2e;">S/ 120.00</span>
+                </div>
+                <div class="d-flex gap-2 w-100">
+                  <button type="button" class="btn btn-agregar flex-grow-1" data-bs-dismiss="modal"
+                    onclick="agregarAlCarrito('Kit Degustacion 3 Origenes', 120.00)"><i
+                      class="fa-solid fa-cart-plus me-2"></i>Agregar al carrito</button>
+                  <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-lg-3" data-categoria="kits-regalo">
+        <div class="card h-100">
+          <img src="../img/caja-regalo-premium.svg" class="card-img-top" alt="caja premium">
+          <div class="card-body d-flex flex-column">
+            <h6 class="card-title">Caja Regalo Premium Florian</h6>
+            <p class="card-text small">Nuestra seleccion mas completa para regalar.</p>
+            <p class="fw-bold mt-auto">S/ 150.00</p>
+            <div class="d-flex gap-2">
+              <button type="button" class="btn btn-outline-dark btn-sm" data-bs-toggle="modal"
+                data-bs-target="#modalCajaPremium">Descripcion</button>
+              <button type="button" class="btn btn-agregar btn-sm"
+                onclick="agregarAlCarrito('Caja Regalo Premium Florian', 150.00)"><i
+                  class="fa-solid fa-cart-plus"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade" id="modalCajaPremium" tabindex="-1" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header bg-cafe-oscuro text-white">
+                <h5 class="modal-title"><i class="fa-solid fa-gift me-2"></i>Caja Regalo Premium Florian</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+              </div>
+              <div class="modal-body text-center">
+                <img src="../img/caja-regalo-premium.svg" class="rounded mb-3"
+                  style="max-height:220px;width:100%;object-fit:cover;" alt="caja premium">
+                <p class="text-muted mb-3">Nuestra seleccion mas completa, pensada para dejar una gran impresion.</p>
+                <ul class="list-group list-group-flush mb-3">
+                  <li class="list-group-item d-flex align-items-center gap-2">
+                    <i class="fa-solid fa-gift" style="color:#4b2e2e;"></i>
+                    <div class="text-start">
+                      <strong>Contenido</strong><br>
+                      <small class="text-muted">Cafe en grano 500g, prensa francesa chica, taza, alfajores y
+                        llavero.</small>
+                    </div>
+                  </li>
+                  <li class="list-group-item d-flex align-items-center gap-2">
+                    <i class="fa-solid fa-box" style="color:#4b2e2e;"></i>
+                    <div class="text-start">
+                      <strong>Presentacion</strong><br>
+                      <small class="text-muted">Caja de madera reutilizable.</small>
+                    </div>
+                  </li>
+                  <li class="list-group-item d-flex align-items-center gap-2">
+                    <i class="fa-solid fa-heart" style="color:#4b2e2e;"></i>
+                    <div class="text-start">
+                      <strong>Ideal para</strong><br>
+                      <small class="text-muted">Regalos corporativos o fechas especiales.</small>
+                    </div>
+                  </li>
+                </ul>
+                <div class="alert alert-success py-2 mb-0">
+                  <i class="fa-solid fa-box-open me-1"></i>
+                  <strong>La caja de madera puede reutilizarse como organizador.</strong>
+                </div>
+              </div>
+              <div class="modal-footer border-0 pt-0">
+                <div class="w-100 d-flex justify-content-between align-items-center mb-2">
+                  <span class="text-muted">Precio</span>
+                  <span class="h4 fw-bold" style="color:#4b2e2e;">S/ 150.00</span>
+                </div>
+                <div class="d-flex gap-2 w-100">
+                  <button type="button" class="btn btn-agregar flex-grow-1" data-bs-dismiss="modal"
+                    onclick="agregarAlCarrito('Caja Regalo Premium Florian', 150.00)"><i
+                      class="fa-solid fa-cart-plus me-2"></i>Agregar al carrito</button>
+                  <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-lg-3" data-categoria="capsulas">
+        <div class="card h-100">
+          <img src="../img/capsulas-espresso-clasico.svg" class="card-img-top" alt="capsulas espresso">
+          <div class="card-body d-flex flex-column">
+            <h6 class="card-title">Capsulas Espresso Clasico x10</h6>
+            <p class="card-text small">Compatibles con cafeteras de capsula estandar.</p>
+            <p class="fw-bold mt-auto">S/ 38.00</p>
+            <div class="d-flex gap-2">
+              <button type="button" class="btn btn-outline-dark btn-sm" data-bs-toggle="modal"
+                data-bs-target="#modalCapsulasEspresso">Descripcion</button>
+              <button type="button" class="btn btn-agregar btn-sm"
+                onclick="agregarAlCarrito('Capsulas Espresso Clasico x10', 38.00)"><i
+                  class="fa-solid fa-cart-plus"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade" id="modalCapsulasEspresso" tabindex="-1" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header bg-cafe-oscuro text-white">
+                <h5 class="modal-title"><i class="fa-solid fa-mug-hot me-2"></i>Capsulas Espresso Clasico x10</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+              </div>
+              <div class="modal-body text-center">
+                <img src="../img/capsulas-espresso-clasico.svg" class="rounded mb-3"
+                  style="max-height:220px;width:100%;object-fit:cover;" alt="capsulas espresso">
+                <p class="text-muted mb-3">Rapidez y sabor en cada capsula, pensadas para el dia a dia.</p>
+                <ul class="list-group list-group-flush mb-3">
+                  <li class="list-group-item d-flex align-items-center gap-2">
+                    <i class="fa-solid fa-plug" style="color:#4b2e2e;"></i>
+                    <div class="text-start">
+                      <strong>Compatibilidad</strong><br>
+                      <small class="text-muted">Cafeteras de capsula estandar.</small>
+                    </div>
+                  </li>
+                  <li class="list-group-item d-flex align-items-center gap-2">
+                    <i class="fa-solid fa-gauge-high" style="color:#4b2e2e;"></i>
+                    <div class="text-start">
+                      <strong>Intensidad</strong><br>
+                      <small class="text-muted">Media-alta (7/10), sabor clasico de espresso.</small>
+                    </div>
+                  </li>
+                  <li class="list-group-item d-flex align-items-center gap-2">
+                    <i class="fa-solid fa-box" style="color:#4b2e2e;"></i>
+                    <div class="text-start">
+                      <strong>Presentacion</strong><br>
+                      <small class="text-muted">Caja de 10 capsulas de aluminio reciclable.</small>
+                    </div>
+                  </li>
+                </ul>
+                <div class="alert alert-success py-2 mb-0">
+                  <i class="fa-solid fa-recycle me-1"></i>
+                  <strong>Aluminio 100% reciclable, cuida el planeta mientras disfrutas tu cafe.</strong>
+                </div>
+              </div>
+              <div class="modal-footer border-0 pt-0">
+                <div class="w-100 d-flex justify-content-between align-items-center mb-2">
+                  <span class="text-muted">Precio</span>
+                  <span class="h4 fw-bold" style="color:#4b2e2e;">S/ 38.00</span>
+                </div>
+                <div class="d-flex gap-2 w-100">
+                  <button type="button" class="btn btn-agregar flex-grow-1" data-bs-dismiss="modal"
+                    onclick="agregarAlCarrito('Capsulas Espresso Clasico x10', 38.00)"><i
+                      class="fa-solid fa-cart-plus me-2"></i>Agregar al carrito</button>
+                  <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-lg-3" data-categoria="capsulas">
+        <div class="card h-100">
+          <img src="../img/capsulas-vainilla.svg" class="card-img-top" alt="capsulas vainilla">
+          <div class="card-body d-flex flex-column">
+            <h6 class="card-title">Capsulas Vainilla x10</h6>
+            <p class="card-text small">Cafe con notas dulces de vainilla natural.</p>
+            <p class="fw-bold mt-auto">S/ 40.00</p>
+            <div class="d-flex gap-2">
+              <button type="button" class="btn btn-outline-dark btn-sm" data-bs-toggle="modal"
+                data-bs-target="#modalCapsulasVainilla">Descripcion</button>
+              <button type="button" class="btn btn-agregar btn-sm"
+                onclick="agregarAlCarrito('Capsulas Vainilla x10', 40.00)"><i
+                  class="fa-solid fa-cart-plus"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade" id="modalCapsulasVainilla" tabindex="-1" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header bg-cafe-oscuro text-white">
+                <h5 class="modal-title"><i class="fa-solid fa-mug-hot me-2"></i>Capsulas Vainilla x10</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+              </div>
+              <div class="modal-body text-center">
+                <img src="../img/capsulas-vainilla.svg" class="rounded mb-3"
+                  style="max-height:220px;width:100%;object-fit:cover;" alt="capsulas vainilla">
+                <p class="text-muted mb-3">Un toque dulce y aromatico para variar tu rutina de cafe.</p>
+                <ul class="list-group list-group-flush mb-3">
+                  <li class="list-group-item d-flex align-items-center gap-2">
+                    <i class="fa-solid fa-plug" style="color:#4b2e2e;"></i>
+                    <div class="text-start">
+                      <strong>Compatibilidad</strong><br>
+                      <small class="text-muted">Cafeteras de capsula estandar.</small>
+                    </div>
+                  </li>
+                  <li class="list-group-item d-flex align-items-center gap-2">
+                    <i class="fa-solid fa-gauge-high" style="color:#4b2e2e;"></i>
+                    <div class="text-start">
+                      <strong>Intensidad</strong><br>
+                      <small class="text-muted">Suave (4/10), con notas dulces de vainilla natural.</small>
+                    </div>
+                  </li>
+                  <li class="list-group-item d-flex align-items-center gap-2">
+                    <i class="fa-solid fa-box" style="color:#4b2e2e;"></i>
+                    <div class="text-start">
+                      <strong>Presentacion</strong><br>
+                      <small class="text-muted">Caja de 10 capsulas de aluminio reciclable.</small>
+                    </div>
+                  </li>
+                </ul>
+                <div class="alert alert-success py-2 mb-0">
+                  <i class="fa-solid fa-mug-saucer me-1"></i>
+                  <strong>Recomendado acompañar con leche vaporizada.</strong>
+                </div>
+              </div>
+              <div class="modal-footer border-0 pt-0">
+                <div class="w-100 d-flex justify-content-between align-items-center mb-2">
+                  <span class="text-muted">Precio</span>
+                  <span class="h4 fw-bold" style="color:#4b2e2e;">S/ 40.00</span>
+                </div>
+                <div class="d-flex gap-2 w-100">
+                  <button type="button" class="btn btn-agregar flex-grow-1" data-bs-dismiss="modal"
+                    onclick="agregarAlCarrito('Capsulas Vainilla x10', 40.00)"><i
+                      class="fa-solid fa-cart-plus me-2"></i>Agregar al carrito</button>
+                  <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-lg-3" data-categoria="capsulas">
+        <div class="card h-100">
+          <img src="../img/capsulas-descafeinado.svg" class="card-img-top" alt="capsulas descafeinado">
+          <div class="card-body d-flex flex-column">
+            <h6 class="card-title">Capsulas Descafeinado x10</h6>
+            <p class="card-text small">Para disfrutar el cafe a cualquier hora del dia.</p>
+            <p class="fw-bold mt-auto">S/ 38.00</p>
+            <div class="d-flex gap-2">
+              <button type="button" class="btn btn-outline-dark btn-sm" data-bs-toggle="modal"
+                data-bs-target="#modalCapsulasDescafeinado">Descripcion</button>
+              <button type="button" class="btn btn-agregar btn-sm"
+                onclick="agregarAlCarrito('Capsulas Descafeinado x10', 38.00)"><i
+                  class="fa-solid fa-cart-plus"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade" id="modalCapsulasDescafeinado" tabindex="-1" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header bg-cafe-oscuro text-white">
+                <h5 class="modal-title"><i class="fa-solid fa-mug-hot me-2"></i>Capsulas Descafeinado x10</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+              </div>
+              <div class="modal-body text-center">
+                <img src="../img/capsulas-descafeinado.svg" class="rounded mb-3"
+                  style="max-height:220px;width:100%;object-fit:cover;" alt="capsulas descafeinado">
+                <p class="text-muted mb-3">El mismo ritual del cafe, sin cafeina, para cualquier momento del dia.</p>
+                <ul class="list-group list-group-flush mb-3">
+                  <li class="list-group-item d-flex align-items-center gap-2">
+                    <i class="fa-solid fa-plug" style="color:#4b2e2e;"></i>
+                    <div class="text-start">
+                      <strong>Compatibilidad</strong><br>
+                      <small class="text-muted">Cafeteras de capsula estandar.</small>
+                    </div>
+                  </li>
+                  <li class="list-group-item d-flex align-items-center gap-2">
+                    <i class="fa-solid fa-gauge-high" style="color:#4b2e2e;"></i>
+                    <div class="text-start">
+                      <strong>Intensidad</strong><br>
+                      <small class="text-muted">Media (5/10).</small>
+                    </div>
+                  </li>
+                  <li class="list-group-item d-flex align-items-center gap-2">
+                    <i class="fa-solid fa-box" style="color:#4b2e2e;"></i>
+                    <div class="text-start">
+                      <strong>Presentacion</strong><br>
+                      <small class="text-muted">Caja de 10 capsulas, descafeinado por proceso natural de agua.</small>
+                    </div>
+                  </li>
+                </ul>
+                <div class="alert alert-info py-2 mb-0">
+                  <i class="fa-solid fa-circle-info me-1"></i>
+                  <strong>Contiene menos del 0.1% de cafeina.</strong>
+                </div>
+              </div>
+              <div class="modal-footer border-0 pt-0">
+                <div class="w-100 d-flex justify-content-between align-items-center mb-2">
+                  <span class="text-muted">Precio</span>
+                  <span class="h4 fw-bold" style="color:#4b2e2e;">S/ 38.00</span>
+                </div>
+                <div class="d-flex gap-2 w-100">
+                  <button type="button" class="btn btn-agregar flex-grow-1" data-bs-dismiss="modal"
+                    onclick="agregarAlCarrito('Capsulas Descafeinado x10', 38.00)"><i
+                      class="fa-solid fa-cart-plus me-2"></i>Agregar al carrito</button>
+                  <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-lg-3" data-categoria="suscripcion">
+        <div class="card h-100">
+          <img src="../img/plan-basico-suscripcion.svg" class="card-img-top" alt="plan basico">
+          <div class="card-body d-flex flex-column">
+            <h6 class="card-title">Plan Basico</h6>
+            <p class="card-text small">1 bolsa de 250g de cafe cada mes, en tu puerta.</p>
+            <p class="fw-bold mt-auto">S/ 35.00 /mes</p>
+            <div class="d-flex gap-2">
+              <button type="button" class="btn btn-outline-dark btn-sm" data-bs-toggle="modal"
+                data-bs-target="#modalPlanBasico">Descripcion</button>
+              <button type="button" class="btn btn-agregar btn-sm"
+                onclick="agregarAlCarrito('Suscripcion Plan Basico', 35.00)"><i
+                  class="fa-solid fa-cart-plus"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade" id="modalPlanBasico" tabindex="-1" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header bg-cafe-oscuro text-white">
+                <h5 class="modal-title"><i class="fa-solid fa-box me-2"></i>Plan Basico</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+              </div>
+              <div class="modal-body text-center">
+                <img src="../img/plan-basico-suscripcion.svg" class="rounded mb-3"
+                  style="max-height:220px;width:100%;object-fit:cover;" alt="plan basico">
+                <p class="text-muted mb-3">La forma mas simple de nunca quedarte sin cafe en casa.</p>
+                <ul class="list-group list-group-flush mb-3">
+                  <li class="list-group-item d-flex align-items-center gap-2">
+                    <i class="fa-solid fa-calendar-days" style="color:#4b2e2e;"></i>
+                    <div class="text-start">
+                      <strong>Frecuencia</strong><br>
+                      <small class="text-muted">1 bolsa de 250g cada mes, entregada en tu domicilio.</small>
+                    </div>
+                  </li>
+                  <li class="list-group-item d-flex align-items-center gap-2">
+                    <i class="fa-solid fa-star" style="color:#4b2e2e;"></i>
+                    <div class="text-start">
+                      <strong>Beneficios</strong><br>
+                      <small class="text-muted">Cafe recien tostado directo a tu puerta cada mes.</small>
+                    </div>
+                  </li>
+                  <li class="list-group-item d-flex align-items-center gap-2">
+                    <i class="fa-solid fa-rotate" style="color:#4b2e2e;"></i>
+                    <div class="text-start">
+                      <strong>Flexibilidad</strong><br>
+                      <small class="text-muted">Cancela cuando quieras, sin permanencia minima.</small>
+                    </div>
+                  </li>
+                </ul>
+                <div class="alert alert-success py-2 mb-0">
+                  <i class="fa-solid fa-truck me-1"></i>
+                  <strong>Envio incluido dentro de Lima Metropolitana.</strong>
+                </div>
+              </div>
+              <div class="modal-footer border-0 pt-0">
+                <div class="w-100 d-flex justify-content-between align-items-center mb-2">
+                  <span class="text-muted">Precio</span>
+                  <span class="h4 fw-bold" style="color:#4b2e2e;">S/ 35.00 /mes</span>
+                </div>
+                <div class="d-flex gap-2 w-100">
+                  <button type="button" class="btn btn-agregar flex-grow-1" data-bs-dismiss="modal"
+                    onclick="agregarAlCarrito('Suscripcion Plan Basico', 35.00)"><i
+                      class="fa-solid fa-cart-plus me-2"></i>Agregar al carrito</button>
+                  <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-lg-3" data-categoria="suscripcion">
+        <div class="card h-100">
+          <img src="../img/plan-explorador-suscripcion.svg" class="card-img-top" alt="plan explorador">
+          <div class="card-body d-flex flex-column">
+            <h6 class="card-title">Plan Explorador</h6>
+            <p class="card-text small">2 bolsas al mes, origen rotativo cada entrega.</p>
+            <p class="fw-bold mt-auto">S/ 65.00 /mes</p>
+            <div class="d-flex gap-2">
+              <button type="button" class="btn btn-outline-dark btn-sm" data-bs-toggle="modal"
+                data-bs-target="#modalPlanExplorador">Descripcion</button>
+              <button type="button" class="btn btn-agregar btn-sm"
+                onclick="agregarAlCarrito('Suscripcion Plan Explorador', 65.00)"><i
+                  class="fa-solid fa-cart-plus"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade" id="modalPlanExplorador" tabindex="-1" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header bg-cafe-oscuro text-white">
+                <h5 class="modal-title"><i class="fa-solid fa-box me-2"></i>Plan Explorador</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+              </div>
+              <div class="modal-body text-center">
+                <img src="../img/plan-explorador-suscripcion.svg" class="rounded mb-3"
+                  style="max-height:220px;width:100%;object-fit:cover;" alt="plan explorador">
+                <p class="text-muted mb-3">Para quienes quieren descubrir un origen nuevo cada mes.</p>
+                <ul class="list-group list-group-flush mb-3">
+                  <li class="list-group-item d-flex align-items-center gap-2">
+                    <i class="fa-solid fa-calendar-days" style="color:#4b2e2e;"></i>
+                    <div class="text-start">
+                      <strong>Frecuencia</strong><br>
+                      <small class="text-muted">2 bolsas de 250g cada mes, origen rotativo.</small>
+                    </div>
+                  </li>
+                  <li class="list-group-item d-flex align-items-center gap-2">
+                    <i class="fa-solid fa-star" style="color:#4b2e2e;"></i>
+                    <div class="text-start">
+                      <strong>Beneficios</strong><br>
+                      <small class="text-muted">Descubre nuevos origenes y perfiles de sabor cada entrega.</small>
+                    </div>
+                  </li>
+                  <li class="list-group-item d-flex align-items-center gap-2">
+                    <i class="fa-solid fa-rotate" style="color:#4b2e2e;"></i>
+                    <div class="text-start">
+                      <strong>Flexibilidad</strong><br>
+                      <small class="text-muted">Cancela cuando quieras, sin permanencia minima.</small>
+                    </div>
+                  </li>
+                </ul>
+                <div class="alert alert-success py-2 mb-0">
+                  <i class="fa-solid fa-truck me-1"></i>
+                  <strong>Envio incluido dentro de Lima Metropolitana.</strong>
+                </div>
+              </div>
+              <div class="modal-footer border-0 pt-0">
+                <div class="w-100 d-flex justify-content-between align-items-center mb-2">
+                  <span class="text-muted">Precio</span>
+                  <span class="h4 fw-bold" style="color:#4b2e2e;">S/ 65.00 /mes</span>
+                </div>
+                <div class="d-flex gap-2 w-100">
+                  <button type="button" class="btn btn-agregar flex-grow-1" data-bs-dismiss="modal"
+                    onclick="agregarAlCarrito('Suscripcion Plan Explorador', 65.00)"><i
+                      class="fa-solid fa-cart-plus me-2"></i>Agregar al carrito</button>
+                  <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-lg-3" data-categoria="suscripcion">
+        <div class="card h-100">
+          <img src="../img/plan-premium-suscripcion.svg" class="card-img-top" alt="plan premium">
+          <div class="card-body d-flex flex-column">
+            <h6 class="card-title">Plan Premium</h6>
+            <p class="card-text small">3 bolsas al mes mas un producto de merchandising sorpresa.</p>
+            <p class="fw-bold mt-auto">S/ 110.00 /mes</p>
+            <div class="d-flex gap-2">
+              <button type="button" class="btn btn-outline-dark btn-sm" data-bs-toggle="modal"
+                data-bs-target="#modalPlanPremium">Descripcion</button>
+              <button type="button" class="btn btn-agregar btn-sm"
+                onclick="agregarAlCarrito('Suscripcion Plan Premium', 110.00)"><i
+                  class="fa-solid fa-cart-plus"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade" id="modalPlanPremium" tabindex="-1" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header bg-cafe-oscuro text-white">
+                <h5 class="modal-title"><i class="fa-solid fa-box me-2"></i>Plan Premium</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+              </div>
+              <div class="modal-body text-center">
+                <img src="../img/plan-premium-suscripcion.svg" class="rounded mb-3"
+                  style="max-height:220px;width:100%;object-fit:cover;" alt="plan premium">
+                <p class="text-muted mb-3">La experiencia completa de Caffe Florian, mes a mes.</p>
+                <ul class="list-group list-group-flush mb-3">
+                  <li class="list-group-item d-flex align-items-center gap-2">
+                    <i class="fa-solid fa-calendar-days" style="color:#4b2e2e;"></i>
+                    <div class="text-start">
+                      <strong>Frecuencia</strong><br>
+                      <small class="text-muted">3 bolsas de 250g cada mes.</small>
+                    </div>
+                  </li>
+                  <li class="list-group-item d-flex align-items-center gap-2">
+                    <i class="fa-solid fa-star" style="color:#4b2e2e;"></i>
+                    <div class="text-start">
+                      <strong>Beneficios</strong><br>
+                      <small class="text-muted">Incluye un articulo sorpresa de merchandising cada mes.</small>
+                    </div>
+                  </li>
+                  <li class="list-group-item d-flex align-items-center gap-2">
+                    <i class="fa-solid fa-rotate" style="color:#4b2e2e;"></i>
+                    <div class="text-start">
+                      <strong>Flexibilidad</strong><br>
+                      <small class="text-muted">Cancela cuando quieras, sin permanencia minima.</small>
+                    </div>
+                  </li>
+                </ul>
+                <div class="alert alert-success py-2 mb-0">
+                  <i class="fa-solid fa-truck me-1"></i>
+                  <strong>Envio incluido dentro de Lima Metropolitana.</strong>
+                </div>
+              </div>
+              <div class="modal-footer border-0 pt-0">
+                <div class="w-100 d-flex justify-content-between align-items-center mb-2">
+                  <span class="text-muted">Precio</span>
+                  <span class="h4 fw-bold" style="color:#4b2e2e;">S/ 110.00 /mes</span>
+                </div>
+                <div class="d-flex gap-2 w-100">
+                  <button type="button" class="btn btn-agregar flex-grow-1" data-bs-dismiss="modal"
+                    onclick="agregarAlCarrito('Suscripcion Plan Premium', 110.00)"><i
+                      class="fa-solid fa-cart-plus me-2"></i>Agregar al carrito</button>
+                  <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-lg-3" data-categoria="catering">
+        <div class="card h-100">
+          <img src="../img/catering-recepciones.svg" class="card-img-top" alt="catering recepciones">
+          <div class="card-body d-flex flex-column">
+            <h6 class="card-title">Catering para Recepciones</h6>
+            <p class="card-text small">Bodas, aniversarios y celebraciones especiales. Minimo 20 personas.</p>
+            <p class="fw-bold mt-auto">Desde S/ 10.00 /persona</p>
+            <div class="d-flex gap-2">
+              <button type="button" class="btn btn-agregar btn-sm w-100" data-bs-toggle="modal"
+                data-bs-target="#modalCateringRecepciones">Personalizar pedido</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade" id="modalCateringRecepciones" tabindex="-1" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+              <div class="modal-header bg-cafe-oscuro text-white">
+                <h5 class="modal-title"><i class="fa-solid fa-champagne-glasses me-2"></i>Catering para Recepciones</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+              </div>
+              <div class="modal-body">
+                <img src="../img/catering-recepciones.svg" class="rounded mb-3 w-100"
+                  style="max-height:200px;object-fit:cover;" alt="catering recepciones">
+                <p class="text-muted">Servicio de cafe y postres pensado para bodas, aniversarios y celebraciones.
+                  Minimo 20 personas.</p>
+
+                <p class="fw-bold mb-2">Tipo de Servicio</p>
+                <ul class="list-group list-group-flush mb-3">
+                  <li class="list-group-item d-flex align-items-center gap-2">
+                    <input class="form-check-input mt-0" type="radio" name="servicioCatering_recepciones"
+                      id="servRecepcionesBasico" data-precio="10.00" checked
+                      onchange="actualizarTotalCatering('recepciones')">
+                    <label class="form-check-label flex-grow-1" for="servRecepcionesBasico">Solo Cafe</label>
+                    <span class="text-muted small">S/ 10.00 /persona</span>
+                  </li>
+                  <li class="list-group-item d-flex align-items-center gap-2">
+                    <input class="form-check-input mt-0" type="radio" name="servicioCatering_recepciones"
+                      id="servRecepcionesMedio" data-precio="16.00" onchange="actualizarTotalCatering('recepciones')">
+                    <label class="form-check-label flex-grow-1" for="servRecepcionesMedio">Cafe + Postre</label>
+                    <span class="text-muted small">S/ 16.00 /persona</span>
+                  </li>
+                  <li class="list-group-item d-flex align-items-center gap-2">
+                    <input class="form-check-input mt-0" type="radio" name="servicioCatering_recepciones"
+                      id="servRecepcionesPremium" data-precio="24.00" onchange="actualizarTotalCatering('recepciones')">
+                    <label class="form-check-label flex-grow-1" for="servRecepcionesPremium">Cafe + Postre
+                      Premium</label>
+                    <span class="text-muted small">S/ 24.00 /persona</span>
+                  </li>
+                </ul>
+
+                <div class="row">
+                  <div class="col-md-6">
+                    <p class="fw-bold mb-2">Postres (elige los que prefieras)</p>
+                    <div class="form-check mb-1"><input class="form-check-input catering-postre-recepciones"
+                        type="checkbox" id="postreRecepciones1" data-etiqueta="Mini Alfajores"><label
+                        class="form-check-label" for="postreRecepciones1">Mini Alfajores</label></div>
+                    <div class="form-check mb-1"><input class="form-check-input catering-postre-recepciones"
+                        type="checkbox" id="postreRecepciones2" data-etiqueta="Brownies Bite-size"><label
+                        class="form-check-label" for="postreRecepciones2">Brownies Bite-size</label></div>
+                    <div class="form-check mb-1"><input class="form-check-input catering-postre-recepciones"
+                        type="checkbox" id="postreRecepciones3" data-etiqueta="Mini Cheesecakes"><label
+                        class="form-check-label" for="postreRecepciones3">Mini Cheesecakes</label></div>
+                    <div class="form-check mb-1"><input class="form-check-input catering-postre-recepciones"
+                        type="checkbox" id="postreRecepciones4" data-etiqueta="Macarons"><label class="form-check-label"
+                        for="postreRecepciones4">Macarons</label></div>
+                    <div class="form-check mb-3"><input class="form-check-input catering-postre-recepciones"
+                        type="checkbox" id="postreRecepciones5" data-etiqueta="Galletas de Avena"><label
+                        class="form-check-label" for="postreRecepciones5">Galletas de Avena</label></div>
+
+                    <p class="fw-bold mb-2">Cafe(s)</p>
+                    <div class="form-check mb-1"><input class="form-check-input catering-cafe-recepciones"
+                        type="checkbox" id="cafeRecepciones1" data-etiqueta="Colombiano"><label class="form-check-label"
+                        for="cafeRecepciones1">Cafe Colombiano</label></div>
+                    <div class="form-check mb-1"><input class="form-check-input catering-cafe-recepciones"
+                        type="checkbox" id="cafeRecepciones2" data-etiqueta="Peruano"><label class="form-check-label"
+                        for="cafeRecepciones2">Cafe Peruano</label></div>
+                    <div class="form-check mb-1"><input class="form-check-input catering-cafe-recepciones"
+                        type="checkbox" id="cafeRecepciones3" data-etiqueta="Blend de la Casa"><label
+                        class="form-check-label" for="cafeRecepciones3">Blend de la Casa</label></div>
+                    <div class="form-check mb-3"><input class="form-check-input catering-cafe-recepciones"
+                        type="checkbox" id="cafeRecepciones4" data-etiqueta="Descafeinado"><label
+                        class="form-check-label" for="cafeRecepciones4">Descafeinado</label></div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <p class="fw-bold mb-2">Tipo(s) de Preparacion</p>
+                    <div class="form-check mb-1"><input class="form-check-input catering-prep-recepciones"
+                        type="checkbox" id="prepRecepciones1" data-etiqueta="Espresso"><label class="form-check-label"
+                        for="prepRecepciones1">Espresso</label></div>
+                    <div class="form-check mb-1"><input class="form-check-input catering-prep-recepciones"
+                        type="checkbox" id="prepRecepciones2" data-etiqueta="Filtrado V60"><label
+                        class="form-check-label" for="prepRecepciones2">Filtrado V60</label></div>
+                    <div class="form-check mb-1"><input class="form-check-input catering-prep-recepciones"
+                        type="checkbox" id="prepRecepciones3" data-etiqueta="Prensa Francesa"><label
+                        class="form-check-label" for="prepRecepciones3">Prensa Francesa</label></div>
+                    <div class="form-check mb-3"><input class="form-check-input catering-prep-recepciones"
+                        type="checkbox" id="prepRecepciones4" data-etiqueta="Cold Brew"><label class="form-check-label"
+                        for="prepRecepciones4">Cold Brew</label></div>
+
+                    <p class="fw-bold mb-2">Restricciones Alimentarias</p>
+                    <div class="form-check mb-1"><input class="form-check-input catering-alergia-recepciones"
+                        type="checkbox" id="alergiaRecepciones1" data-etiqueta="Sin gluten"><label
+                        class="form-check-label" for="alergiaRecepciones1">Sin gluten</label></div>
+                    <div class="form-check mb-1"><input class="form-check-input catering-alergia-recepciones"
+                        type="checkbox" id="alergiaRecepciones2" data-etiqueta="Sin lactosa"><label
+                        class="form-check-label" for="alergiaRecepciones2">Sin lactosa</label></div>
+                    <div class="form-check mb-1"><input class="form-check-input catering-alergia-recepciones"
+                        type="checkbox" id="alergiaRecepciones3" data-etiqueta="Sin frutos secos"><label
+                        class="form-check-label" for="alergiaRecepciones3">Sin frutos secos</label></div>
+                    <div class="form-check mb-3"><input class="form-check-input catering-alergia-recepciones"
+                        type="checkbox" id="alergiaRecepciones4" data-etiqueta="Opcion vegana"><label
+                        class="form-check-label" for="alergiaRecepciones4">Opcion vegana</label></div>
+                  </div>
+                </div>
+
+                <div class="mb-3">
+                  <label class="form-label fw-bold">Cantidad de Personas (minimo 20)</label>
+                  <input type="number" class="form-control" id="cateringPersonas_recepciones" value="20" min="20"
+                    oninput="actualizarTotalCatering('recepciones')">
+                </div>
+
+                <div class="alert alert-info d-flex justify-content-between align-items-center mb-0">
+                  <span><i class="fa-solid fa-calculator me-1"></i>Total estimado:</span>
+                  <strong id="totalCatering_recepciones">S/ 200.00</strong>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-agregar" data-bs-dismiss="modal"
+                  onclick="agregarCateringAlCarrito('recepciones', 'Catering Recepciones')">Agregar al carrito</button>
+                <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Cerrar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-lg-3" data-categoria="catering">
+        <div class="card h-100">
+          <img src="../img/catering-corporativo.svg" class="card-img-top" alt="catering corporativo">
+          <div class="card-body d-flex flex-column">
+            <h6 class="card-title">Catering Corporativo / Reuniones</h6>
+            <p class="card-text small">Para reuniones de empresa y capacitaciones. Minimo 15 personas.</p>
+            <p class="fw-bold mt-auto">Desde S/ 8.00 /persona</p>
+            <div class="d-flex gap-2">
+              <button type="button" class="btn btn-agregar btn-sm w-100" data-bs-toggle="modal"
+                data-bs-target="#modalCateringCorporativo">Personalizar pedido</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade" id="modalCateringCorporativo" tabindex="-1" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+              <div class="modal-header bg-cafe-oscuro text-white">
+                <h5 class="modal-title"><i class="fa-solid fa-briefcase me-2"></i>Catering Corporativo / Reuniones</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+              </div>
+              <div class="modal-body">
+                <img src="../img/catering-corporativo.svg" class="rounded mb-3 w-100"
+                  style="max-height:200px;object-fit:cover;" alt="catering corporativo">
+                <p class="text-muted">Pensado para reuniones de trabajo, capacitaciones y eventos de empresa. Minimo 15
+                  personas.</p>
+
+                <p class="fw-bold mb-2">Tipo de Servicio</p>
+                <ul class="list-group list-group-flush mb-3">
+                  <li class="list-group-item d-flex align-items-center gap-2">
+                    <input class="form-check-input mt-0" type="radio" name="servicioCatering_corporativo"
+                      id="servCorporativoBasico" data-precio="8.00" checked
+                      onchange="actualizarTotalCatering('corporativo')">
+                    <label class="form-check-label flex-grow-1" for="servCorporativoBasico">Solo Cafe</label>
+                    <span class="text-muted small">S/ 8.00 /persona</span>
+                  </li>
+                  <li class="list-group-item d-flex align-items-center gap-2">
+                    <input class="form-check-input mt-0" type="radio" name="servicioCatering_corporativo"
+                      id="servCorporativoMedio" data-precio="14.00" onchange="actualizarTotalCatering('corporativo')">
+                    <label class="form-check-label flex-grow-1" for="servCorporativoMedio">Cafe + Postre</label>
+                    <span class="text-muted small">S/ 14.00 /persona</span>
+                  </li>
+                  <li class="list-group-item d-flex align-items-center gap-2">
+                    <input class="form-check-input mt-0" type="radio" name="servicioCatering_corporativo"
+                      id="servCorporativoPremium" data-precio="20.00" onchange="actualizarTotalCatering('corporativo')">
+                    <label class="form-check-label flex-grow-1" for="servCorporativoPremium">Cafe + Postre
+                      Premium</label>
+                    <span class="text-muted small">S/ 20.00 /persona</span>
+                  </li>
+                </ul>
+
+                <div class="row">
+                  <div class="col-md-6">
+                    <p class="fw-bold mb-2">Postres (elige los que prefieras)</p>
+                    <div class="form-check mb-1"><input class="form-check-input catering-postre-corporativo"
+                        type="checkbox" id="postreCorporativo1" data-etiqueta="Mini Alfajores"><label
+                        class="form-check-label" for="postreCorporativo1">Mini Alfajores</label></div>
+                    <div class="form-check mb-1"><input class="form-check-input catering-postre-corporativo"
+                        type="checkbox" id="postreCorporativo2" data-etiqueta="Brownies Bite-size"><label
+                        class="form-check-label" for="postreCorporativo2">Brownies Bite-size</label></div>
+                    <div class="form-check mb-1"><input class="form-check-input catering-postre-corporativo"
+                        type="checkbox" id="postreCorporativo3" data-etiqueta="Mini Cheesecakes"><label
+                        class="form-check-label" for="postreCorporativo3">Mini Cheesecakes</label></div>
+                    <div class="form-check mb-1"><input class="form-check-input catering-postre-corporativo"
+                        type="checkbox" id="postreCorporativo4" data-etiqueta="Macarons"><label class="form-check-label"
+                        for="postreCorporativo4">Macarons</label></div>
+                    <div class="form-check mb-3"><input class="form-check-input catering-postre-corporativo"
+                        type="checkbox" id="postreCorporativo5" data-etiqueta="Galletas de Avena"><label
+                        class="form-check-label" for="postreCorporativo5">Galletas de Avena</label></div>
+
+                    <p class="fw-bold mb-2">Cafe(s)</p>
+                    <div class="form-check mb-1"><input class="form-check-input catering-cafe-corporativo"
+                        type="checkbox" id="cafeCorporativo1" data-etiqueta="Colombiano"><label class="form-check-label"
+                        for="cafeCorporativo1">Cafe Colombiano</label></div>
+                    <div class="form-check mb-1"><input class="form-check-input catering-cafe-corporativo"
+                        type="checkbox" id="cafeCorporativo2" data-etiqueta="Peruano"><label class="form-check-label"
+                        for="cafeCorporativo2">Cafe Peruano</label></div>
+                    <div class="form-check mb-1"><input class="form-check-input catering-cafe-corporativo"
+                        type="checkbox" id="cafeCorporativo3" data-etiqueta="Blend de la Casa"><label
+                        class="form-check-label" for="cafeCorporativo3">Blend de la Casa</label></div>
+                    <div class="form-check mb-3"><input class="form-check-input catering-cafe-corporativo"
+                        type="checkbox" id="cafeCorporativo4" data-etiqueta="Descafeinado"><label
+                        class="form-check-label" for="cafeCorporativo4">Descafeinado</label></div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <p class="fw-bold mb-2">Tipo(s) de Preparacion</p>
+                    <div class="form-check mb-1"><input class="form-check-input catering-prep-corporativo"
+                        type="checkbox" id="prepCorporativo1" data-etiqueta="Espresso"><label class="form-check-label"
+                        for="prepCorporativo1">Espresso</label></div>
+                    <div class="form-check mb-1"><input class="form-check-input catering-prep-corporativo"
+                        type="checkbox" id="prepCorporativo2" data-etiqueta="Filtrado V60"><label
+                        class="form-check-label" for="prepCorporativo2">Filtrado V60</label></div>
+                    <div class="form-check mb-1"><input class="form-check-input catering-prep-corporativo"
+                        type="checkbox" id="prepCorporativo3" data-etiqueta="Prensa Francesa"><label
+                        class="form-check-label" for="prepCorporativo3">Prensa Francesa</label></div>
+                    <div class="form-check mb-3"><input class="form-check-input catering-prep-corporativo"
+                        type="checkbox" id="prepCorporativo4" data-etiqueta="Cold Brew"><label class="form-check-label"
+                        for="prepCorporativo4">Cold Brew</label></div>
+
+                    <p class="fw-bold mb-2">Restricciones Alimentarias</p>
+                    <div class="form-check mb-1"><input class="form-check-input catering-alergia-corporativo"
+                        type="checkbox" id="alergiaCorporativo1" data-etiqueta="Sin gluten"><label
+                        class="form-check-label" for="alergiaCorporativo1">Sin gluten</label></div>
+                    <div class="form-check mb-1"><input class="form-check-input catering-alergia-corporativo"
+                        type="checkbox" id="alergiaCorporativo2" data-etiqueta="Sin lactosa"><label
+                        class="form-check-label" for="alergiaCorporativo2">Sin lactosa</label></div>
+                    <div class="form-check mb-1"><input class="form-check-input catering-alergia-corporativo"
+                        type="checkbox" id="alergiaCorporativo3" data-etiqueta="Sin frutos secos"><label
+                        class="form-check-label" for="alergiaCorporativo3">Sin frutos secos</label></div>
+                    <div class="form-check mb-3"><input class="form-check-input catering-alergia-corporativo"
+                        type="checkbox" id="alergiaCorporativo4" data-etiqueta="Opcion vegana"><label
+                        class="form-check-label" for="alergiaCorporativo4">Opcion vegana</label></div>
+                  </div>
+                </div>
+
+                <div class="mb-3">
+                  <label class="form-label fw-bold">Cantidad de Personas (minimo 15)</label>
+                  <input type="number" class="form-control" id="cateringPersonas_corporativo" value="15" min="15"
+                    oninput="actualizarTotalCatering('corporativo')">
+                </div>
+
+                <div class="alert alert-info d-flex justify-content-between align-items-center mb-0">
+                  <span><i class="fa-solid fa-calculator me-1"></i>Total estimado:</span>
+                  <strong id="totalCatering_corporativo">S/ 120.00</strong>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-agregar" data-bs-dismiss="modal"
+                  onclick="agregarCateringAlCarrito('corporativo', 'Catering Corporativo')">Agregar al carrito</button>
+                <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Cerrar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-lg-3" data-categoria="catering">
+        <div class="card h-100">
+          <img src="../img/catering-exposiciones.svg" class="card-img-top" alt="catering exposiciones">
+          <div class="card-body d-flex flex-column">
+            <h6 class="card-title">Catering para Exposiciones e Inauguraciones</h6>
+            <p class="card-text small">Ferias, exposiciones e inauguraciones. Minimo 30 personas.</p>
+            <p class="fw-bold mt-auto">Desde S/ 9.00 /persona</p>
+            <div class="d-flex gap-2">
+              <button type="button" class="btn btn-agregar btn-sm w-100" data-bs-toggle="modal"
+                data-bs-target="#modalCateringExposiciones">Personalizar pedido</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade" id="modalCateringExposiciones" tabindex="-1" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+              <div class="modal-header bg-cafe-oscuro text-white">
+                <h5 class="modal-title"><i class="fa-solid fa-door-open me-2"></i>Catering para Exposiciones e
+                  Inauguraciones</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+              </div>
+              <div class="modal-body">
+                <img src="../img/catering-exposiciones.svg" class="rounded mb-3 w-100"
+                  style="max-height:200px;object-fit:cover;" alt="catering exposiciones">
+                <p class="text-muted">Servicio de cafe para ferias, exposiciones de arte e inauguraciones. Minimo 30
+                  personas.</p>
+
+                <p class="fw-bold mb-2">Tipo de Servicio</p>
+                <ul class="list-group list-group-flush mb-3">
+                  <li class="list-group-item d-flex align-items-center gap-2">
+                    <input class="form-check-input mt-0" type="radio" name="servicioCatering_exposiciones"
+                      id="servExposicionesBasico" data-precio="9.00" checked
+                      onchange="actualizarTotalCatering('exposiciones')">
+                    <label class="form-check-label flex-grow-1" for="servExposicionesBasico">Solo Cafe</label>
+                    <span class="text-muted small">S/ 9.00 /persona</span>
+                  </li>
+                  <li class="list-group-item d-flex align-items-center gap-2">
+                    <input class="form-check-input mt-0" type="radio" name="servicioCatering_exposiciones"
+                      id="servExposicionesMedio" data-precio="15.00" onchange="actualizarTotalCatering('exposiciones')">
+                    <label class="form-check-label flex-grow-1" for="servExposicionesMedio">Cafe + Postre</label>
+                    <span class="text-muted small">S/ 15.00 /persona</span>
+                  </li>
+                  <li class="list-group-item d-flex align-items-center gap-2">
+                    <input class="form-check-input mt-0" type="radio" name="servicioCatering_exposiciones"
+                      id="servExposicionesPremium" data-precio="22.00"
+                      onchange="actualizarTotalCatering('exposiciones')">
+                    <label class="form-check-label flex-grow-1" for="servExposicionesPremium">Cafe + Postre
+                      Premium</label>
+                    <span class="text-muted small">S/ 22.00 /persona</span>
+                  </li>
+                </ul>
+
+                <div class="row">
+                  <div class="col-md-6">
+                    <p class="fw-bold mb-2">Postres (elige los que prefieras)</p>
+                    <div class="form-check mb-1"><input class="form-check-input catering-postre-exposiciones"
+                        type="checkbox" id="postreExposiciones1" data-etiqueta="Mini Alfajores"><label
+                        class="form-check-label" for="postreExposiciones1">Mini Alfajores</label></div>
+                    <div class="form-check mb-1"><input class="form-check-input catering-postre-exposiciones"
+                        type="checkbox" id="postreExposiciones2" data-etiqueta="Brownies Bite-size"><label
+                        class="form-check-label" for="postreExposiciones2">Brownies Bite-size</label></div>
+                    <div class="form-check mb-1"><input class="form-check-input catering-postre-exposiciones"
+                        type="checkbox" id="postreExposiciones3" data-etiqueta="Mini Cheesecakes"><label
+                        class="form-check-label" for="postreExposiciones3">Mini Cheesecakes</label></div>
+                    <div class="form-check mb-1"><input class="form-check-input catering-postre-exposiciones"
+                        type="checkbox" id="postreExposiciones4" data-etiqueta="Macarons"><label
+                        class="form-check-label" for="postreExposiciones4">Macarons</label></div>
+                    <div class="form-check mb-3"><input class="form-check-input catering-postre-exposiciones"
+                        type="checkbox" id="postreExposiciones5" data-etiqueta="Galletas de Avena"><label
+                        class="form-check-label" for="postreExposiciones5">Galletas de Avena</label></div>
+
+                    <p class="fw-bold mb-2">Cafe(s)</p>
+                    <div class="form-check mb-1"><input class="form-check-input catering-cafe-exposiciones"
+                        type="checkbox" id="cafeExposiciones1" data-etiqueta="Colombiano"><label
+                        class="form-check-label" for="cafeExposiciones1">Cafe Colombiano</label></div>
+                    <div class="form-check mb-1"><input class="form-check-input catering-cafe-exposiciones"
+                        type="checkbox" id="cafeExposiciones2" data-etiqueta="Peruano"><label class="form-check-label"
+                        for="cafeExposiciones2">Cafe Peruano</label></div>
+                    <div class="form-check mb-1"><input class="form-check-input catering-cafe-exposiciones"
+                        type="checkbox" id="cafeExposiciones3" data-etiqueta="Blend de la Casa"><label
+                        class="form-check-label" for="cafeExposiciones3">Blend de la Casa</label></div>
+                    <div class="form-check mb-3"><input class="form-check-input catering-cafe-exposiciones"
+                        type="checkbox" id="cafeExposiciones4" data-etiqueta="Descafeinado"><label
+                        class="form-check-label" for="cafeExposiciones4">Descafeinado</label></div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <p class="fw-bold mb-2">Tipo(s) de Preparacion</p>
+                    <div class="form-check mb-1"><input class="form-check-input catering-prep-exposiciones"
+                        type="checkbox" id="prepExposiciones1" data-etiqueta="Espresso"><label class="form-check-label"
+                        for="prepExposiciones1">Espresso</label></div>
+                    <div class="form-check mb-1"><input class="form-check-input catering-prep-exposiciones"
+                        type="checkbox" id="prepExposiciones2" data-etiqueta="Filtrado V60"><label
+                        class="form-check-label" for="prepExposiciones2">Filtrado V60</label></div>
+                    <div class="form-check mb-1"><input class="form-check-input catering-prep-exposiciones"
+                        type="checkbox" id="prepExposiciones3" data-etiqueta="Prensa Francesa"><label
+                        class="form-check-label" for="prepExposiciones3">Prensa Francesa</label></div>
+                    <div class="form-check mb-3"><input class="form-check-input catering-prep-exposiciones"
+                        type="checkbox" id="prepExposiciones4" data-etiqueta="Cold Brew"><label class="form-check-label"
+                        for="prepExposiciones4">Cold Brew</label></div>
+
+                    <p class="fw-bold mb-2">Restricciones Alimentarias</p>
+                    <div class="form-check mb-1"><input class="form-check-input catering-alergia-exposiciones"
+                        type="checkbox" id="alergiaExposiciones1" data-etiqueta="Sin gluten"><label
+                        class="form-check-label" for="alergiaExposiciones1">Sin gluten</label></div>
+                    <div class="form-check mb-1"><input class="form-check-input catering-alergia-exposiciones"
+                        type="checkbox" id="alergiaExposiciones2" data-etiqueta="Sin lactosa"><label
+                        class="form-check-label" for="alergiaExposiciones2">Sin lactosa</label></div>
+                    <div class="form-check mb-1"><input class="form-check-input catering-alergia-exposiciones"
+                        type="checkbox" id="alergiaExposiciones3" data-etiqueta="Sin frutos secos"><label
+                        class="form-check-label" for="alergiaExposiciones3">Sin frutos secos</label></div>
+                    <div class="form-check mb-3"><input class="form-check-input catering-alergia-exposiciones"
+                        type="checkbox" id="alergiaExposiciones4" data-etiqueta="Opcion vegana"><label
+                        class="form-check-label" for="alergiaExposiciones4">Opcion vegana</label></div>
+                  </div>
+                </div>
+
+                <div class="mb-3">
+                  <label class="form-label fw-bold">Cantidad de Personas (minimo 30)</label>
+                  <input type="number" class="form-control" id="cateringPersonas_exposiciones" value="30" min="30"
+                    oninput="actualizarTotalCatering('exposiciones')">
+                </div>
+
+                <div class="alert alert-info d-flex justify-content-between align-items-center mb-0">
+                  <span><i class="fa-solid fa-calculator me-1"></i>Total estimado:</span>
+                  <strong id="totalCatering_exposiciones">S/ 270.00</strong>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-agregar" data-bs-dismiss="modal"
+                  onclick="agregarCateringAlCarrito('exposiciones', 'Catering Exposiciones')">Agregar al
+                  carrito</button>
+                <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Cerrar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="carritoOffcanvas" aria-labelledby="carritoOffcanvasLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="carritoOffcanvasLabel"><i class="fa-solid fa-cart-shopping me-2"></i>Carrito de
+        Compras</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <div id="carritoItems" class="mb-3">
+        <p class="text-center text-muted">El carrito esta vacio</p>
+      </div>
+      <div id="carritoTotal" class="d-none">
+        <hr>
+        <div class="d-flex justify-content-between mb-3">
+          <strong>Total:</strong>
+          <strong id="totalAmount">S/ 0.00</strong>
+        </div>
+        <button class="btn btn-agregar w-100" onclick="abrirResumenCompra()">
+          <i class="fa-solid fa-credit-card me-2"></i>Finalizar Compra
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modalResumenCompra" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header bg-cafe-oscuro text-white">
+          <h5 class="modal-title">Resumen de Compra</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div id="resumenItems"></div>
+          <hr>
+          <div class="d-flex justify-content-between">
+            <strong>Total:</strong>
+            <strong id="resumenTotal">S/ 0.00</strong>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-cafe" onclick="irAConfirmacion()">Continuar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modalConfirmarCompra" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header bg-cafe-oscuro text-white">
+          <h5 class="modal-title">Finaliza tu Compra</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <h6>Forma de Entrega</h6>
+          <p class="border rounded p-2"><i class="fa-solid fa-location-dot me-2"></i>Av. Los Cafetales 123, Lima</p>
+          <h6 class="mt-3">Medios de Pago</h6>
+          <div id="medioPagoLista"></div>
+          <button type="button" class="btn btn-outline-dark btn-sm mt-2" onclick="abrirNuevaTarjeta()">
+            <i class="fa-solid fa-plus me-1"></i>Agregar nueva tarjeta
+          </button>
+          <h6 class="mt-3">Facturacion</h6>
+          <p class="text-muted small">Se emitira una boleta de venta electronica a nombre del cliente.</p>
+          <hr>
+          <div class="d-flex justify-content-between">
+            <strong>Total a pagar:</strong>
+            <strong id="confirmarTotal">S/ 0.00</strong>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-cafe" id="btnPagarFinalizar" onclick="confirmarPago()" disabled>Pagar y
+            Finalizar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modalNuevaTarjeta" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header bg-cafe-oscuro text-white">
+          <h5 class="modal-title">Agregar Nueva Tarjeta</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div class="mb-2">
+            <label class="form-label">Numero de tarjeta</label>
+            <input type="text" class="form-control" id="tarjetaNumero" maxlength="19" placeholder="0000 0000 0000 0000">
+          </div>
+          <div class="mb-2">
+            <label class="form-label">Nombre del titular</label>
+            <input type="text" class="form-control" id="tarjetaTitular" placeholder="Ej: Maria Lopez">
+          </div>
+          <div class="row">
+            <div class="col-6 mb-2">
+              <label class="form-label">Vencimiento</label>
+              <input type="text" class="form-control" id="tarjetaVencimiento" placeholder="MM/AA">
+            </div>
+            <div class="col-6 mb-2">
+              <label class="form-label">Codigo de seguridad</label>
+              <input type="text" class="form-control" id="tarjetaCvv" maxlength="3" placeholder="000">
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-cafe" onclick="guardarTarjeta()">Continuar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modalCompraExitosa" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content text-center">
+        <div class="modal-body py-5">
+          <i class="fa-solid fa-circle-check text-success fa-4x mb-3"></i>
+          <h4>Compra Realizada con Exito</h4>
+          <p class="text-muted">Gracias por tu compra en Caffe Florian</p>
+          <button type="button" class="btn btn-cafe" onclick="descargarComprobantePDF()">
+            <i class="fa-solid fa-file-pdf me-2"></i>Descargar Comprobante
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="bg-dark text-light pt-4 pb-3">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mb-3">
+          <h5>Caffe Florian</h5>
+          <p>El lugar perfecto para disfrutar de un buen cafe en compañia de amigos y familia.</p>
+        </div>
+        <div class="col-md-4 mb-3">
+          <h5>Horario</h5>
+          <p class="mb-1">Lunes a Viernes: 7:00am - 9:00pm</p>
+          <p>Sabado y Domingo: 8:00am - 10:00pm</p>
+        </div>
+        <div class="col-md-4 mb-3">
+          <h5>Contacto</h5>
+          <p class="mb-1"><i class="fa-solid fa-location-dot"></i> Av. Los Cafetales 123, Lima</p>
+          <p class="mb-1"><i class="fa-solid fa-phone"></i> +51 987 654 321</p>
+          <p><i class="fa-solid fa-envelope"></i> contacto@caffeflorian.com</p>
+        </div>
+      </div>
+      <hr class="border-light">
+      <p class="text-center mb-0">Caffe Florian 2026 - Todos los derechos reservados</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="../js/library-catalogo.js"></script>
+  <script src="../js/checkout.js"></script>
+  <script src="../js/filtro.js"></script>
+</body>
+
+</html>

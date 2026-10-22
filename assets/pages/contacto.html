@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contacto - Caffe Florian</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+
+<body>
+  <div class="bg-dark text-white py-1">
+    <div class="container d-flex justify-content-between">
+      <div>
+        <i class="fa-solid fa-phone"></i> +51 987 654 321
+        <i class="fa-solid fa-envelope ms-3"></i> contacto@caffeflorian.com
+      </div>
+      <div>
+        <a href="#" class="text-white me-2"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#" class="text-white me-2"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" class="text-white"><i class="fa-brands fa-tiktok"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <header class="sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="../../index.html">
+          <img src="../img/logo.png" alt="logo" width="40" class="d-inline-block align-text-top" />
+          Caffe Florian</a>
+        <div class="d-flex align-items-center ms-auto order-lg-3">
+          <button class="btn btn-dark position-relative me-2" type="button" data-bs-toggle="offcanvas"
+            data-bs-target="#carritoOffcanvas" aria-label="Carrito">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span id="cartCount" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+              style="display: none;">0</span>
+          </button>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+        <div class="collapse navbar-collapse order-lg-2" id="navbarNav">
+          <ul class="navbar-nav ms-lg-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="../../index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="catalogo.html#ofertas">Ofertas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="catalogo.html">Catalogo</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="proveedores.html">Proveedores</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="otras-tiendas.html">Otras Tiendas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contacto.html">Contacto</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Utilidades
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item" href="#">Rastrear mi pedido</a></li>
+                <li><a class="dropdown-item" href="#">Preguntas frecuentes</a></li>
+                <li><a class="dropdown-item" href="#">Politica de devoluciones</a></li>
+                <li><a class="dropdown-item" href="nosotros.html">Sobre Nosotros</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container mt-5 mb-5">
+      <h2 class="text-center mb-4">Contactanos</h2>
+      <div class="row">
+        <div class="col-md-6 mb-4">
+          <h5><i class="fa-solid fa-location-dot"></i> Direccion</h5>
+          <p>Av. Los Cafetales 123, Lima, Peru</p>
+
+          <h5><i class="fa-solid fa-phone"></i> Telefono</h5>
+          <p>+51 987 654 321</p>
+
+          <h5><i class="fa-solid fa-envelope"></i> Correo</h5>
+          <p>contacto@caffeflorian.com</p>
+
+          <h5>Horario de atencion</h5>
+          <p class="mb-1">Lunes a Viernes: 7:00am - 9:00pm</p>
+          <p>Sabado y Domingo: 8:00am - 10:00pm</p>
+
+          <h5>Siguenos</h5>
+          <a href="#" class="text-dark me-3"><i class="fa-brands fa-facebook fa-2x"></i></a>
+          <a href="#" class="text-dark me-3"><i class="fa-brands fa-instagram fa-2x"></i></a>
+          <a href="#" class="text-dark"><i class="fa-brands fa-tiktok fa-2x"></i></a>
+        </div>
+
+        <div class="col-md-6 mb-4">
+          <iframe src="https://www.google.com/maps?q=Lima%20Peru&output=embed" width="100%" height="350"
+            style="border: 0" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+      </div>
+
+      <section>
+        <hr class="my-5" />
+
+        <h2 class="text-center mb-4">Contactate con Nosotros</h2>
+
+        <form>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-floating mb-2">
+                <input class="form-control" type="text" id="campo_nombre" name="nombre" />
+                <label class="form-label" for="campo_nombre">Nombre completo</label>
+              </div>
+
+              <div class="form-floating mb-2">
+                <input class="form-control" type="email" id="campo_correo" name="correo" />
+                <label class="form-label" for="campo_correo">Correo electronico</label>
+              </div>
+
+              <div class="form-floating mb-2">
+                <input class="form-control" type="tel" id="campo_telefono" name="telefono" />
+                <label class="form-label" for="campo_telefono">Telefono</label>
+              </div>
+
+              <div class="form-floating mb-2">
+                <select class="form-select" id="campo_motivo" name="motivo">
+                  <option value="" selected disabled>
+                    Selecciona un motivo
+                  </option>
+                  <option value="consulta">Consulta</option>
+                  <option value="reserva">Reserva</option>
+                  <option value="pedido">Pedido</option>
+                  <option value="reclamo">Reclamo</option>
+                  <option value="sugerencia">Sugerencia</option>
+                  <option value="otro">Otro</option>
+                </select>
+                <label class="form-label" for="campo_motivo">Motivo de contacto</label>
+              </div>
+
+              <div class="form-floating mb-2">
+                <input class="form-control" type="date" id="campo_fecha" name="fecha" />
+                <label class="form-label" for="campo_fecha">Fecha</label>
+              </div>
+
+              <div class="form-floating mb-2">
+                <input class="form-control" type="time" id="campo_hora" name="hora" />
+                <label class="form-label" for="campo_hora">Hora</label>
+              </div>
+
+              <div class="form-floating mb-2">
+                <input class="form-control" type="number" id="campo_personas" name="personas" min="1" max="20" />
+                <label class="form-label" for="campo_personas">Cantidad de personas</label>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="form-floating mb-2">
+                <textarea class="form-control" id="campo_mensaje" name="mensaje" style="height: 408px"></textarea>
+                <label class="form-label" for="campo_mensaje">Mensaje</label>
+              </div>
+
+              <div class="form-check mb-3">
+                <input class="form-check-input" id="check1" type="checkbox" />
+                <label class="form-check-label" for="check1">He leido y acepto los
+                  <a class="link-dark" target="_blank" href="https://www.utp.edu.pe/web/politicas-privacidad">terminos y
+                    condiciones</a>
+                  de privacidad acerca del tratamiento de mis datos
+                  personales</label>
+              </div>
+
+              <button type="submit" class="btn btn-cafe">Enviar</button>
+            </div>
+          </div>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <footer class="bg-dark text-light pt-4 pb-3">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mb-3">
+          <h5>Caffe Florian</h5>
+          <p>
+            El lugar perfecto para disfrutar de un buen cafe en compañia de
+            amigos y familia.
+          </p>
+        </div>
+        <div class="col-md-4 mb-3">
+          <h5>Horario</h5>
+          <p class="mb-1">Lunes a Viernes: 7:00am - 9:00pm</p>
+          <p>Sabado y Domingo: 8:00am - 10:00pm</p>
+        </div>
+        <div class="col-md-4 mb-3">
+          <h5>Contacto</h5>
+          <p class="mb-1">
+            <i class="fa-solid fa-location-dot"></i> Av. Los Cafetales 123,
+            Lima
+          </p>
+          <p class="mb-1">
+            <i class="fa-solid fa-phone"></i> +51 987 654 321
+          </p>
+          <p>
+            <i class="fa-solid fa-envelope"></i> contacto@caffeflorian.com
+          </p>
+        </div>
+      </div>
+      <hr class="border-light" />
+      <p class="text-center mb-0">
+        Caffe Florian 2026 - Todos los derechos reservados
+      </p>
+    </div>
+  </footer>
+
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="carritoOffcanvas" aria-labelledby="carritoOffcanvasLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="carritoOffcanvasLabel"><i class="fa-solid fa-cart-shopping me-2"></i>Carrito de
+        Compras</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <div id="carritoItems" class="mb-3">
+        <p class="text-center text-muted">El carrito esta vacio</p>
+      </div>
+      <div id="carritoTotal" class="d-none">
+        <hr />
+        <div class="d-flex justify-content-between mb-3">
+          <strong>Total:</strong>
+          <strong id="totalAmount">S/ 0.00</strong>
+        </div>
+        <button class="btn btn-agregar w-100" onclick="abrirResumenCompra()">
+          <i class="fa-solid fa-credit-card me-2"></i>Finalizar Compra
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="modalResumenCompra" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header bg-cafe-oscuro text-white">
+          <h5 class="modal-title">Resumen de Compra</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div id="resumenItems"></div>
+          <hr>
+          <div class="d-flex justify-content-between">
+            <strong>Total:</strong>
+            <strong id="resumenTotal">S/ 0.00</strong>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-cafe" onclick="irAConfirmacion()">Continuar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modalConfirmarCompra" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header bg-cafe-oscuro text-white">
+          <h5 class="modal-title">Finaliza tu Compra</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <h6>Forma de Entrega</h6>
+          <p class="border rounded p-2"><i class="fa-solid fa-location-dot me-2"></i>Av. Los Cafetales 123, Lima</p>
+
+          <h6 class="mt-3">Medios de Pago</h6>
+          <div id="medioPagoLista"></div>
+          <button type="button" class="btn btn-outline-dark btn-sm mt-2" onclick="abrirNuevaTarjeta()">
+            <i class="fa-solid fa-plus me-1"></i>Agregar nueva tarjeta
+          </button>
+
+          <h6 class="mt-3">Facturacion</h6>
+          <p class="text-muted small">Se emitira una boleta de venta electronica a nombre del cliente.</p>
+
+          <hr>
+          <div class="d-flex justify-content-between">
+            <strong>Total a pagar:</strong>
+            <strong id="confirmarTotal">S/ 0.00</strong>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-cafe" id="btnPagarFinalizar" onclick="confirmarPago()" disabled>Pagar y
+            Finalizar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modalNuevaTarjeta" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header bg-cafe-oscuro text-white">
+          <h5 class="modal-title">Agregar Nueva Tarjeta</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div class="mb-2">
+            <label class="form-label">Numero de tarjeta</label>
+            <input type="text" class="form-control" id="tarjetaNumero" maxlength="19" placeholder="0000 0000 0000 0000">
+          </div>
+          <div class="mb-2">
+            <label class="form-label">Nombre del titular</label>
+            <input type="text" class="form-control" id="tarjetaTitular" placeholder="Ej: Maria Lopez">
+          </div>
+          <div class="row">
+            <div class="col-6 mb-2">
+              <label class="form-label">Vencimiento</label>
+              <input type="text" class="form-control" id="tarjetaVencimiento" placeholder="MM/AA">
+            </div>
+            <div class="col-6 mb-2">
+              <label class="form-label">Codigo de seguridad</label>
+              <input type="text" class="form-control" id="tarjetaCvv" maxlength="3" placeholder="000">
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-cafe" onclick="guardarTarjeta()">Continuar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modalCompraExitosa" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content text-center">
+        <div class="modal-body py-5">
+          <i class="fa-solid fa-circle-check text-success fa-4x mb-3"></i>
+          <h4>Compra Realizada con Exito</h4>
+          <p class="text-muted">Gracias por tu compra en Caffe Florian</p>
+          <button type="button" class="btn btn-cafe" onclick="descargarComprobantePDF()">
+            <i class="fa-solid fa-file-pdf me-2"></i>Descargar Comprobante
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="../JS/checkout.js"></script>
+  <script src="../JS/library-catalogo.js"></script>
+</body>
+
+</html>
